@@ -1,0 +1,167 @@
+{
+  "app": { "title": "Emoji-Verschlüsselungsübersetzer - Changyou Circle" },
+  "nav": { "home": "Startseite", "help": "Hilfe", "about": "Über uns" },
+  "meta": {
+    "description": "Offizielle Seite von Changyou Circle, dem Emoji-Verschlüsselungsübersetzer – unterstützt 8 Sprachen (Vereinfachtes/Traditionelles Chinesisch, Englisch, Koreanisch, Japanisch, Deutsch, Französisch, Spanisch). Text ⇄ Emojis in beide Richtungen, privater Schlüssel für sichere, diskrete Kommunikation. Keine Anmeldung – Ein‑Klick‑Verschlüsselung. Ideal für Chats, private Nachrichten und grenzüberschreitende Gespräche – unterhaltsam und sicher."
+  },
+  "lang": { "label": "Sprache", "zh": "Chinesisch (vereinfacht)", "zh-TW": "Chinesisch (traditionell)", "en": "Englisch", "es": "Spanisch", "fr": "Französisch", "de": "Deutsch", "ja": "日本語", "ko": "한국어" },
+  "theme": { "label": "Thema", "light": "Zum hellen Modus wechseln", "dark": "Zum dunklen Modus wechseln" },
+  "header": {
+    "title": "Changyou Circle Emoji-Verschlüssler",
+    "subtitle": "Verschlüsselt CJK‑Zeichen (Chinesisch, Japanisch, Koreanisch) sowie lateinische Buchstaben (Englisch, Spanisch, Französisch, Deutsch) plus Zahlen und Satzzeichen."
+  },
+  "input": {
+    "panelTitle": "Eingabetext",
+    "label": "Text zum Ver-/Entschlüsseln eingeben"
+  },
+  "placeholders": [
+    "Zu verschlüsselnden Text eingeben… z. B. Hallo Welt! 123",
+    "Text zum Ver- oder Entschlüsseln eingeben… Buchstaben, Zahlen und Symbole werden unterstützt",
+    "Du kannst Text, Zahlen oder Emojis zum Ver-/Entschlüsseln eingeben",
+    "Probiere: Dies ist ein Test. 123",
+    "Gemischter Text wird unterstützt: Deutsch 123 ! @ #"
+  ],
+  "hints": {
+    "input": "Tipp: Nach der Eingabe unten auf Ver- oder Entschlüsseln klicken",
+    "output": "Tipp: Auf „Ergebnis kopieren“ klicken oder „Tauschen“, um zurück zu übertragen",
+    "stats": "Tipp: Verschlüsselt CJK und lateinische Buchstaben (mit Diakritika) sowie Satzzeichen",
+    "secretLine": "Diskret verwenden; erzähle es anderen nur, wenn du ein weiteres Passwort hinzufügst.",
+    "secretLine2": "Teile Schlüssel nur mit vertrauenswürdigen Personen; Inhalte ohne Schlüssel sind nicht für sensible Kommunikation geeignet."
+  },
+  "guide": {
+    "title": "Anleitung",
+    "step1": "Wähle die Oberflächensprache oben rechts (Chinesisch (vereinfacht)/Chinesisch (traditionell)/Englisch/Spanisch/Französisch/Deutsch/Japanisch/Koreanisch).",
+    "step2": "Optional: Gib einen Verschlüsselungsschlüssel ein (z. B. 123). Der Schlüssel mischt die Emoji‑Zuordnung, sodass nur Personen mit demselben Schlüssel entschlüsseln können.",
+    "step3": "Gib deinen Text ein (unterstützt CJK und lateinische Buchstaben; Satzzeichen optional).",
+    "step4": "Klicke „In Emojis verschlüsseln“ oder „In Text entschlüsseln“.",
+    "step5": "Teile das Ergebnis zusammen mit demselben Schlüssel; sonst schlägt die Entschlüsselung fehl."
+  },
+  "about": {
+    "title": "Changyou Circle • Emoji‑Verschlüsselungsübersetzer",
+    "paragraphs": [
+      "Du willst kleine Geheimnisse im Chat teilen, ohne Aufmerksamkeit zu erregen? Oder Nachrichten unterhaltsamer machen? Dieses Tool wandelt Text in eine Emoji‑Kette um. Wer die Kette erhält, kann sie hier einfügen und den Originaltext zurückbekommen – Emojis als „Geheimcode“ zum Chatten.",
+      "Ganz einfach: Seite öffnen, Text eingeben, Sprache wählen, auf „Verschlüsseln“ klicken – Text wird zu Emojis. Emoji‑Geheimtext erhalten? Einfügen und „Entschlüsseln“ – fertig. Ohne Lernaufwand.",
+      "Unterstützt 8 Sprachen (Vereinfachtes/Traditionelles Chinesisch, Englisch, Koreanisch, Japanisch, plus Deutsch, Französisch, Spanisch).",
+      "Am nützlichsten ist der private Schlüssel – ein „Schloss“ für den Emoji‑Geheimtext. Nur wer denselben Schlüssel kennt, kann den Originaltext sehen. Für Geheimnisse, persönliche Grüße, sensible Infos oder grenzüberschreitende Chats.",
+      "Keine Registrierung oder Anmeldung: Text, Sprache, optional Schlüssel, verschlüsseln – schnell und praktisch.",
+      "Anders als normale Emoji‑Generatoren verbindet es Spaß und Sicherheit: lebendige Chats, verschlüsselte Kommunikation und Mehrsprachen‑Support. Emojis als „Code“ senden und die Privatsphäre per Schlüssel schützen.",
+      "Ob mehr Spaß im Alltag, „Codes“ mit Freunden, private Kommunikation oder Gespräche mit internationalen Kontakten – dieses Tool hilft. Text in Emojis verstecken, Privatsphäre schützen – mit einem einfachen Ablauf."
+    ]
+  },
+  "settings": {
+    "title": "Erweiterte Einstellungen",
+    "key": "Verschlüsselungsschlüssel",
+    "keyPlaceholder": "Schlüssel eingeben (z. B. 123)",
+    "preserveSpaces": "Leerzeichen und Zeilenumbrüche beibehalten",
+    "includeNumbers": "Zahlen verschlüsseln",
+    "includePunctuation": "Satzzeichen verschlüsseln",
+    "keyUnset": "(Schlüssel nicht gesetzt)",
+    "keyWeak": "(Schwacher Schlüssel)",
+    "keyMedium": "(Mittlerer Schlüssel)",
+    "keyStrong": "(Starker Schlüssel)"
+  },
+  "buttons": {
+    "encrypt": "In Emojis verschlüsseln",
+    "decrypt": "In Text entschlüsseln",
+    "test": "Ver-/Entschlüsselung testen",
+    "multiTest": "Mehrsprachiger Selbsttest",
+    "example": "Beispiel laden",
+    "copy": "Ergebnis kopieren",
+    "clear": "Leeren",
+    "swap": "Tauschen",
+    "import": "Datei importieren",
+    "exportTxt": "TXT exportieren",
+    "exportPng": "Bild exportieren",
+    "share": "Teilen",
+    "copyLink": "Link kopieren"
+  },
+  "actions": { "cancel": "Abbrechen", "export": "Exportieren", "close": "Schließen" },
+  "output": {
+    "panelTitle": "Ausgabe",
+    "placeholder": "Das ver- oder entschlüsselte Ergebnis erscheint hier…",
+    "emptyEncrypt": "Verschlüsselungsergebnis ist leer",
+    "emptyDecrypt": "Entschlüsselungsergebnis ist leer"
+  },
+  "history": {
+    "recent": "Letzte Einträge",
+    "clear": "Verlauf löschen",
+    "clearAsk": "Letzten Verlauf löschen?",
+    "none": "Noch kein Verlauf",
+    "enc": "Verschlüsseln",
+    "dec": "Entschlüsseln",
+    "apply": "Wiederverwenden"
+  },
+  "export": { "title": "Bild-Export-Optionen", "includeQR": "QR-Code einschließen" },
+  "stats": {
+    "title": "Verschlüsselungsstatistiken",
+    "totalChars": "Zeichen insgesamt",
+    "animalCount": "Tier‑Emojis",
+    "personCount": "Personen‑Emojis",
+    "strength": "Verschlüsselungsstärke"
+  },
+  "emoji": {
+    "animalsTitle": "Tier‑Emojis (lateinische Buchstaben, Zahlen, westliche Satzzeichen)",
+    "personsTitle": "Personen‑Emojis (CJK‑Zeichen und CJK‑Satzzeichen)",
+    "corresponding": "Entspricht: "
+  },
+  "help": {
+    "title": "Hilfe - Changyou Circle",
+    "quickStart": {
+      "title": "Schnellstart",
+      "step1": { "title": "Sprache & Thema", "text": "Sprache oben rechts wechseln; Mond/Sonne für Dunkel/Hell." },
+      "step2": { "title": "Text eingeben", "text": "In „Eingabetext“ Inhalt einfügen oder tippen." },
+      "step3": { "title": "Schlüssel (optional)", "text": "Unter „Erweiterte Einstellungen“ einen Schlüssel setzen." },
+      "step4": { "title": "Verschlüsseln / Entschlüsseln", "text": "Auf „Verschlüsseln“ oder „Entschlüsseln“ klicken. Shortcuts: Ctrl+E / Ctrl+D." },
+      "step5": { "title": "Kopieren / Import / Export", "text": "„Ergebnis kopieren“; „Datei importieren“ unterstützt TXT/MD/Bilder; TXT/PNG exportieren." },
+      "step6": { "title": "Teilen", "text": "„Teilen“ erzeugt Link und QR; beim Bildexport kannst du einen sichtbaren QR einschließen." },
+      "tip": "Tipp: Füge den QR hinzu, wenn andere ihn leicht scannen sollen."
+    },
+    "emojiInput": {
+      "title": "Emoji-Eingabe",
+      "win": "<strong>Windows</strong>: Win + . öffnet das Emoji-Panel.",
+      "mac": "<strong>macOS</strong>: Ctrl + Cmd + Leertaste öffnet das Emoji-Panel.",
+      "ios": "<strong>iPhone/iPad</strong>: Zum Emoji‑Tastatur wechseln; lang drücken für Varianten.",
+      "android": "<strong>Android</strong>: Emoji‑Panel der Tastatur öffnen.",
+      "tip": "Mit „Wiederverwenden“ kannst du Ergebnisse aus dem Verlauf zurück in die Eingabe legen."
+    },
+    "faq": {
+      "title": "FAQ",
+      "q1": "<strong>F: Nach dem Verschlüsseln sehe ich keinen Text?</strong><br>Ergebnis steht im Ausgabebereich; „Tauschen“ bringt es zurück zur Eingabe.",
+      "q2": "<strong>F: Wie entschlüssele ich aus exportiertem Bild?</strong><br>Wenn das Bild einen sichtbaren QR enthält, scannen; sonst Text aus dem Bild kopieren und hier entschlüsseln.",
+      "q3": "<strong>F: Ist mehrsprachiges Scheitern ein Fehler?</strong><br>Nein. Solange „Verschlüsseln→Entschlüsseln“ den Originaltext wiederherstellt, ist alles in Ordnung."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "text": "Vorschläge? Kontaktiere uns: webmaster#3520.net (@)."
+    }
+  },
+  "footer": { "copyright": "© 2026 Changyou Circle - Emoji‑Verschlüsselungsübersetzer" },
+  "notify": {
+    "copied": "In die Zwischenablage kopiert!",
+    "applied": "Ergebnis in die Eingabe übernommen",
+    "historyCleared": "Letzter Verlauf gelöscht",
+    "failed": "Aktion fehlgeschlagen",
+    "encrypt": {
+      "empty": "Bitte Text zum Verschlüsseln eingeben!",
+      "done": "Verschlüsselung abgeschlossen!",
+      "animals": "Tier‑Emojis: {count}",
+      "persons": "Personen‑Emojis: {count}"
+    },
+    "decrypt": {
+      "empty": "Bitte Text zum Entschlüsseln eingeben!",
+      "done": "Entschlüsselung abgeschlossen! {count} Emojis entschlüsselt."
+    },
+    "copy": { "empty": "Nichts zum Kopieren!" },
+    "cleared": "Alle Inhalte geleert!",
+    "swapped": "Eingabe und Ausgabe getauscht!",
+    "multiDone": "Selbsttest abgeschlossen: {pass}/{total} bestanden",
+    "test": {
+      "success": "Test bestanden! Ver- und Entschlüsselung sind identisch.",
+      "failure": "Test fehlgeschlagen! Original und Entschlüsselung unterscheiden sich."
+    },
+    "exampleLoaded": "Beispieltext geladen!"
+  },
+  "keyboard": {
+    "hint": "Emoji‑Eingabe: Windows Win + . | macOS Ctrl + Cmd + Leertaste | Mobil auf Emoji‑Tastatur wechseln"
+  }
+}

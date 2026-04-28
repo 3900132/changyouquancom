@@ -1,0 +1,1612 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="表情密文翻译器官网 - 支持中文简繁体、英语、韩语、日语等8种语言，可实现文本与表情包双向加密转换，支持专属密钥设置，打造安全隐秘的表情加密通讯工具，无需注册登录，一键完成文本转表情暗号，适配日常聊天、私密沟通、跨境交流等多种场景，趣味与安全兼具的表情密文翻译平台。">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <title>表情密密文翻译器 - 常友圈</title>
+    <link rel="stylesheet" href="/fontawesome6.4/css/all.min.css">
+    <link rel="stylesheet" href="/fontawesome6.4/app-controls.css">
+    
+</head>
+<style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}body{background:linear-gradient(135deg,#2c3e50 0%,#4a6491 100%);color:#f1f1f1;min-height:100vh;padding:20px}.container{max-width:1200px;margin:0 auto}header{text-align:center;margin-bottom:30px;padding:20px;border-bottom:1px solid rgba(255,255,255,0.1)}h1{font-size:2.5rem;margin-bottom:10px;background:linear-gradient(90deg,#ff9966,#ff5e62);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}.subtitle{font-size:1.1rem;color:#b0b0d0;max-width:600px;margin:0 auto;line-height:1.5}.main-content{display:flex;flex-wrap:wrap;gap:30px;margin-bottom:30px}.panel{flex:1;min-width:300px;background:rgba(35,45,65,0.9);border-radius:15px;padding:25px;box-shadow:0 10px 30px rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.05)}.panel-header{display:flex;align-items:center;margin-bottom:20px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,0.1)}.panel-header i{font-size:1.5rem;margin-right:10px;color:#ff9966}.panel-header h2{font-size:1.5rem}.settings-group{margin-bottom:20px}.settings-group label{display:block;margin-bottom:8px;color:#b0b0d0;font-size:0.95rem}.panel-hint{font-size:0.85rem;color:#8888cc;margin-top:20px;padding:10px;background:rgba(45,55,75,0.5);border-radius:6px;font-style:italic;border-left:3px solid #4ecdc4}.advanced-settings{margin-top:20px;padding:15px;background:rgba(45,55,75,0.6);border-radius:8px;border-left:4px solid #ff9966}.advanced-settings h4{color:#ff9966;margin-bottom:10px;display:flex;align-items:center}.advanced-settings h4 i{margin-right:8px}.checkbox-group{display:flex;align-items:center;margin-bottom:10px}.checkbox-group input{width:auto;margin-right:10px}.checkbox-group label{margin-bottom:0}textarea{width:100%;min-height:180px;padding:15px;background:rgba(55,65,85,0.9);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:white;font-size:1rem;resize:vertical;transition:all 0.3s;line-height:1.6}textarea:hover,textarea:focus{border-color:#ff9966;outline:none}.button-group{display:flex;justify-content:space-between;margin-top:20px;gap:10px}button{flex:1;padding:12px 20px;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.3s;display:flex;align-items:center;justify-content:center;gap:8px}.encrypt-btn{background:linear-gradient(90deg,#ff9966,#ff5e62);color:white}.decrypt-btn{background:linear-gradient(90deg,#4ecdc4,#44a08d);color:white}.copy-btn{background:linear-gradient(90deg,#a8ff78,#78ffd6);color:#2c3e50}button:hover{transform:translateY(-3px);box-shadow:0 5px 15px rgba(0,0,0,0.3)}button:active{transform:translateY(0)}.result-container{position:relative;min-height:250px;margin-bottom:10px}.copy-btn{position:absolute;bottom:15px;right:15px;padding:10px 15px;width:auto;z-index:10}.stats-panel{background:rgba(35,45,65,0.9);border-radius:15px;padding:25px;margin-top:20px;box-shadow:0 10px 30px rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.05)}.stats-header{display:flex;align-items:center;margin-bottom:15px}.stats-header i{font-size:1.5rem;margin-right:10px;color:#ff9966}.stats-header h3{font-size:1.3rem}.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-bottom:20px}.stat-item{background:rgba(45,55,75,0.6);padding:15px;border-radius:8px;text-align:center}.stat-value{font-size:2rem;font-weight:bold;color:#ff9966;margin-bottom:5px}.stat-label{font-size:0.9rem;color:#b0b0d0}.emoji-display{font-size:1.8rem;line-height:1.8;min-height:200px;word-break:break-word;padding:15px;background:rgba(45,55,75,0.6);border-radius:8px;overflow-wrap:break-word;padding-bottom:60px}footer{text-align:center;margin-top:40px;padding:20px;color:#8888aa;font-size:0.9rem;border-top:1px solid rgba(255,255,255,0.05)}.notification{position:fixed;bottom:20px;right:20px;background:rgba(255,153,102,0.9);color:#2c3e50;padding:15px 20px;border-radius:8px;font-weight:600;box-shadow:0 5px 15px rgba(0,0,0,0.3);opacity:0;transform:translateY(20px);transition:all 0.3s;z-index:1000}.notification.show{opacity:1;transform:translateY(0)}@media (max-width:768px){.main-content{flex-direction:column}.panel{min-width:100%}h1{font-size:2rem}.emoji-display{font-size:1.5rem;padding-bottom:70px}.stats-grid{grid-template-columns:1fr}.copy-btn{bottom:10px;right:10px;padding:8px 12px;font-size:0.9rem}}.emoji-grid-container{display:flex;gap:20px;margin-top:10px}.emoji-type{flex:1;padding:10px;background:rgba(45,55,75,0.6);border-radius:8px}.emoji-type-title{font-size:1rem;color:#ff9966;margin-bottom:10px;text-align:center;padding-bottom:5px;border-bottom:1px solid rgba(255,255,255,0.1)}.emoji-type-grid{display:flex;flex-wrap:wrap;gap:5px;max-height:100px;overflow-y:auto;padding:5px}.emoji-item{font-size:1.2rem;cursor:pointer;transition:transform 0.2s}.emoji-item:hover{transform:scale(1.2)}.emoji-item.selected{outline:2px solid #ff9966;border-radius:5px}.input-text-container{margin-top:20px}.test-buttons{margin-top:15px;display:flex;gap:10px}.test-btn{padding:8px 12px;font-size:0.9rem;background:rgba(78,205,196,0.7)}textarea::placeholder{color:#8888cc;opacity:0.7}.animal-emoji{color:#4ecdc4}.person-emoji{color:#ff9966}
+</style>
+ 
+ 
+<body>
+    <div class="container">
+        <header>
+            <div class="control-bar">
+                <button id="themeToggle" class="icon-btn dark" title="Theme"><i class="far fa-moon"></i></button>
+                <div class="lang-menu-wrapper">
+                    <button id="langBtn" class="icon-btn dark" title="Language"><i class="fas fa-language"></i></button>
+                    <div id="langMenu" class="lang-menu"></div>
+                </div>
+            </div>
+            <div class="top-buttons-spacer"></div>
+            <h1><img src="/logo.png" alt="" class="site-logo"><span data-i18n="header.title">常友圈 智能表情加密器</span></h1>
+            <p class="subtitle" data-i18n="header.subtitle">使用表情加密数字、英文、中文和标点符号。智能分类，一目了然。</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="panel">
+                <div class="panel-header">
+                    <i class="fas fa-keyboard"></i>
+                    <h2 data-i18n="input.panelTitle">输入文本</h2>
+                </div>
+                
+                
+                <div class="input-text-container">
+                    <label for="inputText"><i class="fas fa-pen"></i> <span data-i18n="input.label">输入要加密/解密的文本</span></label>
+                    <div style="margin:6px 0 4px;color:#9aa4b2;font-size:12px"><span data-i18n="keyboard.hint">表情输入法：Windows 按 Win + . ｜ macOS 按 Ctrl + Cmd + Space ｜ 手机键盘切换到 Emoji</span></div>
+                    <textarea id="inputText" placeholder="在此输入要加密的文本...支持中文、英文、数字和符号"></textarea>
+                </div>
+                
+                
+                <div class="panel-hint">
+                    <i class="fas fa-info-circle"></i> <span data-i18n="hints.input">提示：输入文本后点击下方按钮进行加密或解密</span>
+                </div>
+                
+                
+                <div class="advanced-settings">
+                    <h4><i class="fas fa-sliders-h"></i> <span data-i18n="settings.title">高级设置</span></h4>
+                    <div class="settings-group">
+                        <label for="secretKey"><span data-i18n="settings.key">加密密钥</span><span id="keyStrengthInline" style="margin-left:8px;font-size:0.85rem;opacity:0.9">（未设置）</span></label>
+                        <input type="text" id="secretKey" data-i18n="settings.keyPlaceholder" placeholder="请输入密钥（如 123）">
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="preserveSpaces" checked>
+                        <label for="preserveSpaces" data-i18n="settings.preserveSpaces">保留空格和换行</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="includeNumbers" checked>
+                        <label for="includeNumbers" data-i18n="settings.includeNumbers">加密数字</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="includePunctuation" checked>
+                        <label for="includePunctuation" data-i18n="settings.includePunctuation">加密标点符号</label>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="encrypt-btn" id="encryptBtn">
+                        <i class="fas fa-paw"></i> <span data-i18n="buttons.encrypt">加密为表情</span>
+                    </button>
+                    <button class="decrypt-btn" id="decryptBtn">
+                        <i class="fas fa-language"></i> <span data-i18n="buttons.decrypt">解密为文本</span>
+                    </button>
+                </div>
+                
+                
+                <div class="test-buttons">
+                    <button class="test-btn" id="testBtn">
+                        <i class="fas fa-vial"></i> <span data-i18n="buttons.test">测试加密解密</span>
+                    </button>
+                    <button class="test-btn" id="exampleBtn">
+                        <i class="fas fa-lightbulb"></i> <span data-i18n="buttons.example">加载示例</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-header">
+                    <i class="fas fa-file-code"></i>
+                    <h2 data-i18n="output.panelTitle">输出结果</h2>
+                </div>
+                
+                <div class="result-container">
+                    <div class="emoji-display" id="outputText" data-i18n="output.placeholder">加密或解密后的结果将显示在这里...</div>
+                    <button class="copy-btn" id="copyBtn">
+                        <i class="far fa-copy"></i> <span data-i18n="buttons.copy">复制结果</span>
+                    </button>
+                </div>
+                
+                
+                <div class="panel-hint">
+                    <i class="fas fa-info-circle"></i> <span data-i18n="hints.output">提示：点击"复制结果"按钮复制加密/解密结果，或点击"交换文本"将结果移回输入框</span>
+                </div>
+                
+                <div class="button-group actions" style="margin-top: 15px;">
+                    <button class="encrypt-btn" id="clearBtn">
+                        <i class="fas fa-broom"></i> <span data-i18n="buttons.clear">清空</span>
+                    </button>
+                    <button class="decrypt-btn" id="swapBtn">
+                        <i class="fas fa-exchange-alt"></i> <span data-i18n="buttons.swap">交换文本</span>
+                    </button>
+                    <button class="encrypt-btn" id="importBtn">
+                        <i class="fas fa-file-import"></i> <span data-i18n="buttons.import">导入文件</span>
+                    </button>
+                </div>
+                <input type="file" id="fileInput" accept=".txt,.md,text/plain,image/png,image/jpeg" style="display:none">
+                <div class="button-group actions" style="margin-top: 10px;">
+                    <button class="encrypt-btn" id="exportBtn">
+                        <i class="fas fa-file-export"></i> <span data-i18n="buttons.exportTxt">导出TXT</span>
+                    </button>
+                    <button class="encrypt-btn" id="exportPngBtn">
+                        <i class="fas fa-image"></i> <span data-i18n="buttons.exportPng">导出图片</span>
+                    </button>
+                    <button class="encrypt-btn" id="shareQrBtn">
+                        <i class="fas fa-qrcode"></i> <span data-i18n="buttons.share">分享我们</span>
+                    </button>
+                </div>
+                <div class="panel-hint" style="margin-top:10px;display:flex;justify-content:space-between;align-items:center">
+                    <div><i class="fas fa-clock"></i> <span data-i18n="history.recent">最近记录</span></div>
+                    <button id="clearHistoryBtn" class="mini-btn" title="清除最近记录" style="flex:0 0 auto"><i class="fas fa-trash"></i> <span data-i18n="history.clear">清除记录</span></button>
+                </div>
+                <div id="historyPanel" style="display:grid;gap:8px;margin-top:8px"></div>
+            </div>
+        </div>
+        
+        <div class="stats-panel">
+            <div class="stats-header">
+                <i class="fas fa-chart-bar"></i>
+                <h3 data-i18n="stats.title">加密统计</h3>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="charCount">0</div>
+                    <div class="stat-label" data-i18n="stats.totalChars">总字符数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="animalEmojiCount">0</div>
+                    <div class="stat-label" data-i18n="stats.animalCount">动物表情数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="personEmojiCount">0</div>
+                    <div class="stat-label" data-i18n="stats.personCount">人物表情数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="encryptionStrength">0%</div>
+                    <div class="stat-label" data-i18n="stats.strength">加密强度</div>
+                </div>
+            </div>
+            
+            <div class="emoji-grid-container">
+                <div class="emoji-type">
+                    <div class="emoji-type-title" data-i18n="emoji.animalsTitle">动物表情 (数字、英文、英文标点)</div>
+                    <div class="emoji-type-grid" id="animalGrid">
+                        
+                    </div>
+                </div>
+                <div class="emoji-type">
+                    <div class="emoji-type-title" data-i18n="emoji.personsTitle">人物表情 (中文、中文标点)</div>
+                    <div class="emoji-type-grid" id="personGrid">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="panel-hint" style="margin-top: 15px;">
+                <i class="fas fa-info-circle"></i> <span data-i18n="hints.stats">提示：表情加密数字、英文、中文和标点符号</span>
+                <div style="margin-top:8px;"><span data-i18n="hints.secretLine">偷偷地用，不要告诉人啊，除非你给你的加密再加个密码。</span></div>
+                <div style="margin-top:4px;"><span data-i18n="hints.secretLine2">仅与信任的人共享密钥；未设置密钥的内容不适合作为敏感信息的交流。</span></div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="panel" style="margin-top:16px;">
+            <div class="panel-header">
+                <i class="fas fa-book"></i>
+                <h3 data-i18n="guide.title">使用说明</h3>
+            </div>
+            <div class="settings-group" style="color:#c9d1d9;line-height:1.7">
+                <ol style="padding-left:18px">
+                    <li data-i18n="guide.step1">在右上角选择界面语言（支持中文、繁体、英/西/法/德/日/韩）。</li>
+                    <li data-i18n="guide.step2">可选：在“加密密钥”中输入自定义密钥（如 123），密钥会打乱表情映射表，确保只有同密钥的人能解密。</li>
+                    <li data-i18n="guide.step3">在输入框中输入要处理的文本（支持中文、英文、数字；可选加密标点）。</li>
+                    <li data-i18n="guide.step4">点击“加密为表情”生成表情密文；点击“解密为文本”可还原。</li>
+                    <li data-i18n="guide.step5">复制结果发送给朋友，并告知相同密钥；否则无法正确解密。</li>
+                </ol>
+            </div>
+        </div>
+        
+        <footer class="page-footer">
+            <div class="footer-line">
+                <p data-i18n="footer.copyright">© 2026 常友圈 - 表情密文翻译器</p>
+                <a class="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备2024105328号-3</a>
+                <div class="footer-actions inline">
+                    <a class="btn" id="aboutLink" href="/about.html"><i class="fa-solid fa-circle-info"></i> <span data-i18n="nav.about">关于我们</span></a>
+                    <a class="btn" id="helpLink" href="/help.html"><i class="fa-solid fa-circle-question"></i> <span data-i18n="nav.help">使用帮助</span></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <div class="notification" id="notification">已复制到剪贴板！</div>
+    <div id="qrModal">
+      <div id="qrBox">
+        <h3 data-i18n="buttons.share">分享我们</h3>
+        <img id="qrImg" alt="QR">
+        <div class="modal-actions center">
+          <button class="encrypt-btn" id="qrCopyLink"><i class="far fa-copy"></i> <span data-i18n="buttons.copyLink">复制链接</span></button>
+          <button class="decrypt-btn" id="qrClose"><i class="fas fa-xmark"></i> <span data-i18n="actions.close">关闭</span></button>
+        </div>
+      </div>
+    </div>
+    <div id="clearModal">
+      <div id="clearSheet">
+        <h3 data-i18n="history.clearAsk">清除最近记录？</h3>
+        <div class="row">
+          <button class="decrypt-btn" id="clearCancelBtn"><i class="fas fa-xmark"></i> <span data-i18n="actions.cancel">取消</span></button>
+          <button class="encrypt-btn" id="clearConfirmBtn"><i class="fas fa-trash"></i> <span data-i18n="history.clear">清除记录</span></button>
+        </div>
+      </div>
+    </div>
+    <div id="exportModal">
+      <div id="exportBox">
+        <h3 data-i18n="export.title">导出图片选项</h3>
+        <label>
+          <input type="checkbox" id="optIncludeQR"> <span data-i18n="export.includeQR">包含二维码</span>
+        </label>
+        <div class="modal-actions">
+          <button class="decrypt-btn" id="exportCancelBtn"><i class="fas fa-xmark"></i> <span data-i18n="actions.cancel">取消</span></button>
+          <button class="encrypt-btn" id="exportDoBtn"><i class="fas fa-check"></i> <span data-i18n="actions.export">导出</span></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/i18n/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function detectPreferredLang() {
+                const nav = (navigator.language || 'zh').toLowerCase();
+                if (nav.startsWith('zh-tw') || nav.startsWith('zh-hant')) return 'zh-TW';
+                if (nav.startsWith('zh')) return 'zh';
+                if (nav.startsWith('en')) return 'en';
+                if (nav.startsWith('es')) return 'es';
+                if (nav.startsWith('fr')) return 'fr';
+                if (nav.startsWith('de')) return 'de';
+                if (nav.startsWith('ja')) return 'ja';
+                if (nav.startsWith('ko')) return 'ko';
+                return 'zh';
+            }
+            if (window.i18n) {
+                i18n.init({ defaultLang: detectPreferredLang() }).then(function () {
+                    if (typeof buildLangMenu === 'function') buildLangMenu();
+                    if (typeof updateIconTitles === 'function') updateIconTitles();
+                    if (typeof updateKeyStrength === 'function') updateKeyStrength();
+                    if (typeof updateEmojiGrids === 'function') updateEmojiGrids();
+                    if (typeof renderHistory === 'function') renderHistory();
+                    if (typeof refreshUITexts === 'function') refreshUITexts();
+                    try {
+                        var aboutLink = document.getElementById('aboutLink');
+                        if (aboutLink && window.i18n && i18n.current) {
+                            aboutLink.href = '/' + i18n.current + '/about.html';
+                        }
+                        var helpLink = document.getElementById('helpLink');
+                        if (helpLink && window.i18n && i18n.current) {
+                            helpLink.href = '/' + i18n.current + '/help.html';
+                        }
+                        var p = window.location.pathname || '/';
+                        if (!/^\/(zh|zh\-TW|en|es|fr|de|ja|ko)\/?$/.test(p)) {
+                            window.history.replaceState(null, '', '/' + i18n.current + '/');
+                        }
+                    } catch(e){}
+                });
+            }
+        });
+    </script>
+    <script>
+        
+        const preserveSpacesCheckbox = document.getElementById('preserveSpaces');
+        const includeNumbersCheckbox = document.getElementById('includeNumbers');
+        const includePunctuationCheckbox = document.getElementById('includePunctuation');
+        const inputText = document.getElementById('inputText');
+        const outputText = document.getElementById('outputText');
+        const encryptBtn = document.getElementById('encryptBtn');
+        const decryptBtn = document.getElementById('decryptBtn');
+        const copyBtn = document.getElementById('copyBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const swapBtn = document.getElementById('swapBtn');
+        const testBtn = document.getElementById('testBtn');
+        const exampleBtn = document.getElementById('exampleBtn');
+        const importBtn = document.getElementById('importBtn');
+        const fileInput = document.getElementById('fileInput');
+        const exportBtn = document.getElementById('exportBtn');
+        const exportPngBtn = document.getElementById('exportPngBtn');
+        const shareQrBtn = document.getElementById('shareQrBtn');
+        const qrModal = document.getElementById('qrModal');
+        const qrImg = document.getElementById('qrImg');
+        const qrClose = document.getElementById('qrClose');
+        const qrCopyLink = document.getElementById('qrCopyLink');
+        function getShareURL(includeContent) {
+            const cfg = {
+                lang: (window.i18n && i18n.current) ? i18n.current : 'zh',
+                theme: document.body.classList.contains('theme-light') ? 'light' : 'dark',
+                ps: !!preserveSpacesCheckbox.checked,
+                num: !!includeNumbersCheckbox.checked,
+                pun: !!includePunctuationCheckbox.checked
+            };
+            const enc = btoa(unescape(encodeURIComponent(JSON.stringify(cfg))));
+            let url = `${location.origin}${location.pathname}?cfg=${enc}`;
+            if (includeContent) {
+                const content = (outputText.textContent && outputText.textContent !== outputPlaceholder()) ? outputText.textContent : inputText.value;
+                if (content) {
+                    const ct = btoa(unescape(encodeURIComponent(content)));
+                    url += `&ct=${ct}&au=1`;
+                }
+            }
+            return url;
+        }
+        (function applyCfgFromSearch(){
+            try {
+                const m = location.search.match(/[?&]cfg=([^&]+)/);
+                if (m && m[1]) {
+                    const txt = decodeURIComponent(escape(atob(m[1])));
+                    const cfg = JSON.parse(txt);
+                    if (cfg.theme === 'light') document.body.classList.add('theme-light'); else document.body.classList.remove('theme-light');
+                    if (cfg.lang && window.i18n) i18n.setLanguage(cfg.lang).then(refreshUITexts);
+                    if (typeof cfg.ps === 'boolean') preserveSpacesCheckbox.checked = cfg.ps;
+                    if (typeof cfg.num === 'boolean') includeNumbersCheckbox.checked = cfg.num;
+                    if (typeof cfg.pun === 'boolean') includePunctuationCheckbox.checked = cfg.pun;
+                }
+                const ctm = location.search.match(/[?&]ct=([^&]+)/);
+                if (ctm && ctm[1]) {
+                    const content = decodeURIComponent(escape(atob(ctm[1])));
+                    if (content) {
+                        if (inputText) inputText.value = content;
+                        if (outputText) outputText.textContent = outputPlaceholder();
+                        updateStats();
+                        showNotification('已加载分享内容，直接点击“解密”即可');
+                    }
+                }
+                const aum = location.search.match(/[?&]au=1/);
+                if (aum && qrModal) {
+                    qrModal.style.display = 'flex';
+                    const url = getShareURL(true);
+                    const api = 'https://api.qrserver.com/v1/create-qr-code/?size=220x220&ecc=H&data='+encodeURIComponent(url);
+                    if (qrImg) qrImg.src = api;
+                }
+            } catch(e){}
+        })();
+        
+        const animalGrid = document.getElementById('animalGrid');
+        const personGrid = document.getElementById('personGrid');
+        const notification = document.getElementById('notification');
+        const themeToggle = document.getElementById('themeToggle');
+        const langBtn = document.getElementById('langBtn');
+        const langMenu = document.getElementById('langMenu');
+        const secretKeyInput = document.getElementById('secretKey');
+        
+       
+        const charCountEl = document.getElementById('charCount');
+        const animalEmojiCountEl = document.getElementById('animalEmojiCount');
+        const personEmojiCountEl = document.getElementById('personEmojiCount');
+        const encryptionStrengthEl = document.getElementById('encryptionStrength');
+        
+       
+        const animalEmojis = [
+            "🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼", "🐨", "🐯", "🦁", "🐮", "🐷", "🐸", "🐵", 
+            "🐔", "🐧", "🐦", "🐤", "🦆", "🦅", "🦉", "🦇", "🐺", "🐗", "🐴", "🦄", "🐝", "🐛", "🦋", 
+            "🐌", "🐞", "🐜", "🦗", "🕷", "🦂", "🐢", "🐍", "🦎", "🐊", "🐅", "🐆", "🦓", "🦍", "🐘", 
+            "🦏", "🐪", "🐫", "🦒", "🐃", "🐂", "🐄", "🐎", "🐖", "🐏", "🐑", "🐐", "🦌", "🐕", "🐩", 
+            "🐈", "🐓", "🦃", "🕊", "🐇", "🐁", "🐀", "🐿", "🦔", "🐾", "🐉", "🐲", "🌵", "🎄", "🌲", 
+            "🌳", "🌴", "🌱", "🌿", "☘️", "🍀", "🎍", "🎋", "🍃", "🍂", "🍁", "🍄", "🌾", "💐", "🌷", 
+            "🌹", "🥀", "🌺", "🌸", "🌼", "🌻", "🌞", "🌝", "🌛", "🌜", "🌚", "🌕", "🌖", "🌗", "🌘", 
+            "🌑", "🌒", "🌓", "🌔", "🌙", "🌎", "🌍", "🌏", "🪐", "💫", "⭐", "🌟", "✨", "⚡", "☄️", 
+            "💥", "🔥", "🌪", "🌈", "☀️", "🌤", "⛅", "🌥", "☁️", "🌦", "🌧", "⛈", "🌩", "🌨", "❄️", 
+            "☃️", "⛄", "🌬", "💨", "💧", "💦", "☔", "☂️", "🌊", "🌫"
+        ];
+        
+        
+        const personEmojis = [
+            "😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "☺️", "😊", "😇", "🙂", "🙃", "😉", "😌", 
+            "😍", "🥰", "😘", "😗", "😙", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", 
+            "🥸", "🤩", "🥳", "😏", "😒", "😞", "😔", "😟", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", 
+            "🥺", "😢", "😭", "😤", "😠", "😡", "🤬", "🤯", "😳", "🥵", "🥶", "😱", "😨", "😰", "😥", 
+            "😓", "🤗", "🤔", "🤭", "🤫", "🤥", "😶", "😐", "😑", "😬", "🙄", "😯", "😦", "😧", "😮", 
+            "😲", "🥱", "😴", "🤤", "😪", "😵", "🤐", "🥴", "🤢", "🤮", "🤧", "😷", "🤒", "🤕", "🤑", 
+            "🤠", "😈", "👿", "👹", "👺", "🤡", "💩", "👻", "💀", "☠️", "👽", "👾", "🤖", "🎃", "😺", 
+            "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "👋", "🤚", "🖐️", "✋", "🖖", "👌", "🤌", 
+            "🤏", "✌️", "🤞", "🤟", "🤘", "🤙", "👈", "👉", "👆", "🖕", "👇", "☝️", "👍", "👎", "✊", 
+            "👊", "🤛", "🤜", "👏", "🙌", "👐", "🤲", "🤝", "🙏", "✍️", "💅", "🤳", "💪", "🦾", "🦿"
+        ];
+        
+        
+        let charToEmojiMap = {}; 
+        let emojiToCharMap = {}; 
+       
+        
+        let animalCharMap = {}; 
+        let personCharMap = {}; 
+        
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            setInputPlaceholder();
+            
+            
+            generateEmojiMapping();
+            updateEmojiGrids();
+            updateStats();
+            
+            
+            inputText.addEventListener('input', updateStats);
+            initTheme();
+            wireLangMenu();
+            setTimeout(buildLangMenu, 300);
+            initKey();
+        });
+        
+        
+        function setInputPlaceholder() {
+            const phs = (window.i18n && typeof i18n.getArray === 'function' ? i18n.getArray('placeholders') : null);
+            const placeholders = (phs && phs.length ? phs : [
+                "在此输入要加密的文本...例如：你好世界！Hello World! 123",
+                "输入要加密或解密的文本...支持中文、英文、数字和符号",
+                "可以输入中文、英文、数字或表情进行加密/解密",
+                "试试输入：你好！This is a test. 123",
+                "支持混合文本：中文English123！@#"
+            ]);
+            const randomPlaceholder = placeholders[Math.floor(Math.random() * placeholders.length)];
+            inputText.placeholder = randomPlaceholder;
+        }
+
+        function outputPlaceholder() {
+            return (window.i18n && typeof i18n.t === 'function') ? i18n.t('output.placeholder') : '加密或解密后的结果将显示在这里...';
+        }
+        function updateIconTitles() {
+            if (langBtn && window.i18n && i18n.t) {
+                langBtn.title = i18n.t('lang.label');
+            }
+            if (themeToggle && window.i18n && i18n.t) {
+                themeToggle.title = (document.body.classList.contains('theme-light') ? (i18n.t('theme.dark') || 'Dark Mode') : (i18n.t('theme.light') || 'Light Mode'));
+            }
+            var aboutLink = document.getElementById('aboutLink');
+            if (aboutLink && window.i18n && i18n.t) {
+                aboutLink.title = i18n.t('nav.about') || '关于我们';
+            }
+            var helpLink = document.getElementById('helpLink');
+            if (helpLink && window.i18n && i18n.t) {
+                helpLink.title = i18n.t('nav.help') || '使用帮助';
+            }
+        }
+        function updateThemeIcon() {
+            if (!themeToggle) return;
+            const icon = themeToggle.querySelector('i');
+            if (!icon) return;
+            if (document.body.classList.contains('theme-light')) {
+                icon.className = 'far fa-sun';
+            } else {
+                icon.className = 'far fa-moon';
+            }
+            updateIconTitles();
+        }
+        function refreshUITexts() {
+            buildLangMenu();
+            setInputPlaceholder();
+            updateStats();
+            updateIconTitles();
+            if (typeof updateKeyStrength === 'function') updateKeyStrength();
+            if (typeof updateEmojiGrids === 'function') updateEmojiGrids();
+            if (typeof renderHistory === 'function') renderHistory();
+            var aboutLink = document.getElementById('aboutLink');
+            if (aboutLink && window.i18n && i18n.current) {
+                aboutLink.href = '/' + i18n.current + '/about.html';
+            }
+            var helpLink = document.getElementById('helpLink');
+            if (helpLink && window.i18n && i18n.current) {
+                helpLink.href = '/' + i18n.current + '/help.html';
+            }
+        }
+        function initKey() {
+            try {
+                let savedKey = localStorage.getItem('secretKey');
+                if (savedKey === '123') { try { localStorage.removeItem('secretKey'); } catch(e){} savedKey = ''; }
+                savedKey = savedKey || '';
+                if (secretKeyInput) {
+                    secretKeyInput.value = savedKey;
+                    secretKeyInput.addEventListener('input', function() {
+                        try { localStorage.setItem('secretKey', secretKeyInput.value); } catch(e){}
+                        generateEmojiMapping();
+                        updateEmojiGrids();
+                        updateStats();
+                        updateKeyStrength();
+                    });
+                    updateKeyStrength();
+                }
+            } catch(e){}
+        }
+        function updateKeyStrength() {
+            const el = document.getElementById('keyStrengthInline');
+            if (!el || !secretKeyInput) return;
+            const val = secretKeyInput.value || '';
+            const bl = ['123','123456','654321','password','qwerty','abc','abc123','111111','000000'];
+            if (!val) { el.textContent = (window.i18n && i18n.t ? i18n.t('settings.keyUnset') : '（密码未设置）'); el.style.color = '#ffb4a8'; return; }
+            const lower = /[a-z]/.test(val), upper = /[A-Z]/.test(val), digit = /\d/.test(val), sym = /[^A-Za-z0-9]/.test(val);
+            let score = 0;
+            if (val.length >= 12) score += 2; else if (val.length >= 8) score += 1;
+            if (lower) score++; if (upper) score++; if (digit) score++; if (sym) score++;
+            const weak = bl.includes(val.toLowerCase());
+            if (weak || score <= 2) { el.textContent = (window.i18n && i18n.t ? i18n.t('settings.keyWeak') : '（密码弱）'); el.style.color = '#ff5e62'; }
+            else if (score <= 4) { el.textContent = (window.i18n && i18n.t ? i18n.t('settings.keyMedium') : '（密码中）'); el.style.color = '#ffd27d'; }
+            else { el.textContent = (window.i18n && i18n.t ? i18n.t('settings.keyStrong') : '（密码强）'); el.style.color = '#4ecdc4'; }
+        }
+        function sanitizeForDecrypt(s) {
+            const seed = getKeySeed();
+            const alpha = new Set(zwsAlphabet(seed));
+            const keep = new Set([SENTINEL, ...alpha]);
+            let removed = 0;
+            let out = '';
+            for (const ch of s) {
+                const cp = ch.codePointAt(0);
+                const isZw = (ch === '\u200B' || ch === '\u200C' || ch === '\u200D' || ch === '\u2060');
+                const isCtrl = ch === '\u00A0' || ch === '\uFEFF' || ch === '\u200E' || ch === '\u200F' || (cp >= 0x202A && cp <= 0x202E) || (cp >= 0x2066 && cp <= 0x2069);
+                if ((isZw && !keep.has(ch)) || isCtrl) { removed++; continue; }
+                out += ch;
+            }
+            return { text: out, removed };
+        }
+        function isLikelyCipher(text) {
+            if (!text) return false;
+            const ae = (currentAnimalEmojis || animalEmojis);
+            const pe = (currentPersonEmojis || personEmojis);
+            let found = 0;
+            for (const e of ae) { if (text.includes(e)) { found++; if (found>1) break; } }
+            for (const e of pe) { if (text.includes(e)) { found++; if (found>1) break; } }
+            if (found > 1) return true;
+            if (text.includes(SENTINEL) || /[\u200B\u200C\u200D\u2060]/.test(text)) return true;
+            return false;
+        }
+        let smartGuard = false;
+        function hashString(s) {
+            let h = 2166136261 >>> 0;
+            for (let i = 0; i < s.length; i++) {
+                h ^= s.charCodeAt(i);
+                h = Math.imul(h, 16777619);
+            }
+            return h >>> 0;
+        }
+        function mulberry32(a) {
+            return function() {
+                let t = a += 0x6D2B79F5;
+                t = Math.imul(t ^ (t >>> 15), t | 1);
+                t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+                return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+            };
+        }
+        function seededShuffle(arr, seed) {
+            const rand = mulberry32(seed >>> 0);
+            const a = arr.slice();
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(rand() * (i + 1));
+                const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+            }
+            return a;
+        }
+        const SENTINEL = '\u2063';
+        function getKeySeed() {
+            const val = (secretKeyInput && secretKeyInput.value) ? secretKeyInput.value : '';
+            if (!val) return 0;
+            return hashString(val);
+        }
+        function zwsAlphabet(seed) {
+            const base = ['\u200B','\u200C','\u200D','\u2060'];
+            if (!seed) return base;
+            return seededShuffle(base, seed);
+        }
+        function encodeCpWithKey(cp, seed) {
+            const MOD = 0x110000;
+            let enc = (cp + (seed % MOD) + MOD) % MOD;
+            const alpha = zwsAlphabet(seed);
+            let out = '';
+            if (enc === 0) return alpha[0]; 
+            while (enc > 0) {
+                const twoBits = enc & 3;
+                out += alpha[twoBits];
+                enc >>>= 2;
+            }
+            return out;
+        }
+        function decodeCpWithKey(zwsRun, seed) {
+            const alpha = zwsAlphabet(seed);
+            const map = new Map([[alpha[0],0],[alpha[1],1],[alpha[2],2],[alpha[3],3]]);
+            let val = 0;
+            let shift = 0;
+            for (let i = 0; i < zwsRun.length; i++) {
+                const ch = zwsRun[i];
+                if (!map.has(ch)) break;
+                val |= (map.get(ch) & 3) << shift;
+                shift += 2;
+            }
+            const MOD = 0x110000;
+            let cp = (val - (seed % MOD));
+            cp = ((cp % MOD) + MOD) % MOD;
+            return { cp, consumed: Math.floor(shift / 2) };
+        }
+        let currentAnimalEmojis = null;
+        let currentPersonEmojis = null;
+        function buildLangMenu() {
+            if (!langMenu || !window.i18n) return;
+            const current = (i18n.current || 'zh');
+            const all = [
+                { code:'zh', label:(i18n.t('lang.zh')||'中文') },
+                { code:'zh-TW', label:(i18n.t('lang.zh-TW')||'繁體中文') },
+                { code:'en', label:(i18n.t('lang.en')||'English') },
+                { code:'es', label:(i18n.t('lang.es')||'Español') },
+                { code:'fr', label:(i18n.t('lang.fr')||'Français') },
+                { code:'de', label:(i18n.t('lang.de')||'Deutsch') },
+                { code:'ja', label:(i18n.t('lang.ja')||'日本語') },
+                { code:'ko', label:(i18n.t('lang.ko')||'한국어') }
+            ];
+            const active = all.find(it => it.code === current);
+            const others = all.filter(it => it.code !== current);
+            const items = active ? [active, ...others] : all;
+            langMenu.innerHTML = items.map(it => {
+                const isActive = it.code === current ? ' active' : '';
+                return `<div class="lang-item${isActive}" data-code="${it.code}" ${isActive ? 'data-active="1"' : ''}>
+                    <span class="label">${it.label}</span>
+                </div>`;
+            }).join('');
+        }
+        function wireLangMenu() {
+            if (langBtn) {
+                langBtn.addEventListener('click', function(e){
+                    e.stopPropagation();
+                    if (langMenu) langMenu.classList.toggle('open');
+                });
+            }
+            if (langMenu) {
+                langMenu.addEventListener('click', function(e){
+                    const item = e.target.closest('.lang-item');
+                    if (!item) return;
+                    if (item.getAttribute('data-active') === '1') { langMenu.classList.remove('open'); return; }
+                    const code = item.getAttribute('data-code');
+                    if (window.i18n) {
+                        i18n.setLanguage(code).then(() => {
+                            refreshUITexts();
+                            try {
+                                const path = window.location.pathname || '/';
+                                const target = '/' + code + '/';
+                                if (!/^\/(zh|zh\-TW|en|es|fr|de|ja|ko)\/?$/.test(path) || !path.startsWith(target)) {
+                                    window.history.replaceState(null, '', target);
+                                }
+                                var aboutLink = document.getElementById('aboutLink');
+                                if (aboutLink) aboutLink.href = '/' + code + '/about.html';
+                                var helpLink = document.getElementById('helpLink');
+                                if (helpLink) helpLink.href = '/' + code + '/help.html';
+                            } catch(e){}
+                        });
+                    }
+                    langMenu.classList.remove('open');
+                });
+            }
+            document.addEventListener('click', function(){
+                if (langMenu) langMenu.classList.remove('open');
+            });
+        }
+        function initTheme() {
+            try {
+                const saved = localStorage.getItem('theme');
+                if (!saved) {
+                    const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+                    if (prefersLight) document.body.classList.add('theme-light');
+                } else if (saved === 'light') {
+                    document.body.classList.add('theme-light');
+                }
+            } catch(e){}
+            updateThemeIcon();
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function(){
+                    document.body.classList.toggle('theme-light');
+                    try {
+                        localStorage.setItem('theme', document.body.classList.contains('theme-light') ? 'light' : 'dark');
+                    } catch(e){}
+                    updateThemeIcon();
+                });
+            }
+        }
+       
+        
+        function generateEmojiMapping() {
+            
+            charToEmojiMap = {};
+            emojiToCharMap = {};
+            animalCharMap = {};
+            personCharMap = {};
+            
+            const keyVal = secretKeyInput && secretKeyInput.value ? secretKeyInput.value : '';
+            const baseSeed = keyVal ? hashString(keyVal) : 0;
+            currentAnimalEmojis = keyVal ? seededShuffle(animalEmojis, baseSeed) : animalEmojis;
+            currentPersonEmojis = keyVal ? seededShuffle(personEmojis, (baseSeed ^ 0x9e3779b9) >>> 0) : personEmojis;
+            
+            
+            for (let i = 0; i <= 9; i++) {
+                const char = i.toString();
+                const emojiIndex = i % currentAnimalEmojis.length;
+                const emoji = currentAnimalEmojis[emojiIndex];
+                
+                charToEmojiMap[char] = emoji;
+                emojiToCharMap[emoji] = char;
+                animalCharMap[char] = emoji;
+            }
+            
+           
+            for (let i = 0; i < 26; i++) {
+                const char = String.fromCharCode(65 + i); 
+                const emojiIndex = (10 + i) % currentAnimalEmojis.length; 
+                const emoji = currentAnimalEmojis[emojiIndex];
+                
+                charToEmojiMap[char] = emoji;
+                emojiToCharMap[emoji] = char;
+                animalCharMap[char] = emoji;
+            }
+            
+            
+            for (let i = 0; i < 26; i++) {
+                const char = String.fromCharCode(97 + i); 
+                const emojiIndex = (36 + i) % currentAnimalEmojis.length; 
+                const emoji = currentAnimalEmojis[emojiIndex];
+                
+                charToEmojiMap[char] = emoji;
+                emojiToCharMap[emoji] = char;
+                animalCharMap[char] = emoji;
+            }
+            
+            
+            const englishPunctuation = [
+                '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', 
+                '_', '+', '-', '=', '[', ']', '{', '}', '|', '\\',
+                ';', ':', '"', "'", ',', '.', '<', '>', '/', '?',
+                '`', '~'
+            ];
+            
+            englishPunctuation.forEach((char, index) => {
+                const emojiIndex = (62 + index) % currentAnimalEmojis.length; 
+                const emoji = currentAnimalEmojis[emojiIndex];
+                
+                charToEmojiMap[char] = emoji;
+                emojiToCharMap[emoji] = char;
+                animalCharMap[char] = emoji;
+            });
+            
+            
+            const chinesePunctuation = [
+                '，', '。', '！', '？', '、', '；', '：', '「', '」', '『', '』', 
+                '（', '）', '《', '》', '【', '】', '｛', '｝', '·', '～', '＠', 
+                '＃', '￥', '％', '＆', '＊', '＋', '－', '＝', '＿'
+            ];
+            
+            chinesePunctuation.forEach((char, index) => {
+                const emojiIndex = index % currentPersonEmojis.length;
+                const emoji = currentPersonEmojis[emojiIndex];
+                
+                charToEmojiMap[char] = emoji;
+                emojiToCharMap[emoji] = char;
+                personCharMap[char] = emoji;
+            });
+        }
+        
+        
+        
+        function getEmojiForChineseChar(char) {
+            if (charToEmojiMap[char]) return charToEmojiMap[char];
+            let hash = 0;
+            for (let i = 0; i < char.length; i++) {
+                hash = ((hash << 5) - hash) + char.charCodeAt(i);
+                hash = hash & hash;
+            }
+            hash = Math.abs(hash);
+            const base = currentPersonEmojis || personEmojis;
+            const emojiIndex = hash % base.length;
+            const emoji = base[emojiIndex];
+            if (emojiToCharMap[emoji]) {
+                for (let i = 1; i < base.length; i++) {
+                    const nextIndex = (emojiIndex + i) % base.length;
+                    const nextEmoji = base[nextIndex];
+                    if (!emojiToCharMap[nextEmoji]) {
+                        charToEmojiMap[char] = nextEmoji;
+                        emojiToCharMap[nextEmoji] = char;
+                        personCharMap[char] = nextEmoji;
+                        return nextEmoji;
+                    }
+                }
+            }
+            charToEmojiMap[char] = emoji;
+            emojiToCharMap[emoji] = char;
+            personCharMap[char] = emoji;
+            return emoji;
+        }
+        
+        function getEmojiForLatinExtChar(char) {
+            if (charToEmojiMap[char]) return charToEmojiMap[char];
+            let hash = 0;
+            for (let i = 0; i < char.length; i++) {
+                hash = ((hash << 5) - hash) + char.charCodeAt(i);
+                hash = hash & hash;
+            }
+            hash = Math.abs(hash);
+            const base = currentAnimalEmojis || animalEmojis;
+            const emojiIndex = hash % base.length;
+            const emoji = base[emojiIndex];
+            if (emojiToCharMap[emoji]) {
+                for (let i = 1; i < base.length; i++) {
+                    const nextIndex = (emojiIndex + i) % base.length;
+                    const nextEmoji = base[nextIndex];
+                    if (!emojiToCharMap[nextEmoji]) {
+                        charToEmojiMap[char] = nextEmoji;
+                        emojiToCharMap[nextEmoji] = char;
+                        animalCharMap[char] = nextEmoji;
+                        return nextEmoji;
+                    }
+                }
+            }
+            charToEmojiMap[char] = emoji;
+            emojiToCharMap[emoji] = char;
+            animalCharMap[char] = emoji;
+            return emoji;
+        }
+        
+        
+        function getCharForEmoji(emoji) {
+            return emojiToCharMap[emoji] || null;
+        }
+        
+        
+        function updateEmojiGrids() {
+            
+            animalGrid.innerHTML = '';
+            (currentAnimalEmojis || animalEmojis).slice(0, 30).forEach(emoji => {
+                const emojiElement = document.createElement('div');
+                emojiElement.className = 'emoji-item animal-emoji';
+                emojiElement.textContent = emoji;
+                
+                const char = emojiToCharMap[emoji];
+                if (char) {
+                    const prefix = (window.i18n && i18n.t) ? i18n.t('emoji.corresponding') : '对应: ';
+                    emojiElement.title = `${prefix}${char}`;
+                }
+                
+                animalGrid.appendChild(emojiElement);
+            });
+            
+            
+            personGrid.innerHTML = '';
+            (currentPersonEmojis || personEmojis).slice(0, 30).forEach(emoji => {
+                const emojiElement = document.createElement('div');
+                emojiElement.className = 'emoji-item person-emoji';
+                emojiElement.textContent = emoji;
+                
+                const char = emojiToCharMap[emoji];
+                if (char) {
+                    emojiElement.title = `对应: ${char}`;
+                }
+                
+                personGrid.appendChild(emojiElement);
+            });
+        }
+        
+        
+        function updateStats() {
+            const text = inputText.value;
+            
+            
+            const totalChars = text.length;
+            charCountEl.textContent = totalChars;
+            
+            
+            if (outputText.textContent && outputText.textContent !== outputPlaceholder()) {
+                const emojiText = outputText.textContent;
+                
+                
+                let animalCount = 0;
+                const ae = (currentAnimalEmojis || animalEmojis);
+                for (const emoji of ae) {
+                    const regex = new RegExp(emoji.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+                    const matches = emojiText.match(regex);
+                    if (matches) {
+                        animalCount += matches.length;
+                    }
+                }
+                
+                
+                let personCount = 0;
+                const pe = (currentPersonEmojis || personEmojis);
+                for (const emoji of pe) {
+                    const regex = new RegExp(emoji.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+                    const matches = emojiText.match(regex);
+                    if (matches) {
+                        personCount += matches.length;
+                    }
+                }
+                
+                animalEmojiCountEl.textContent = animalCount;
+                personEmojiCountEl.textContent = personCount;
+                
+                
+                const emojiRatio = (animalCount + personCount) / Math.max(totalChars, 1);
+                encryptionStrengthEl.textContent = `${Math.round(emojiRatio * 100)}%`;
+            } else {
+                animalEmojiCountEl.textContent = '0';
+                personEmojiCountEl.textContent = '0';
+                encryptionStrengthEl.textContent = '0%';
+            }
+        }
+        
+        
+        function getCharType(char) {
+            
+            if (char.match(/[0-9]/)) {
+                return 'number';
+            }
+            
+            else if (char.match(/[a-zA-Z]/)) {
+                return 'english';
+            }
+            
+            else if (char.match(/[\u00C0-\u00FF\u0100-\u017F\u0180-\u024F]/)) {
+                return 'latin-ext';
+            }
+            
+            else if (char.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`]/)) {
+                return 'english-punctuation';
+            }
+            
+            else if (char.match(/[¡¿«»…–—‚‘’„“”]/)) {
+                return 'western-punctuation';
+            }
+            
+            else if (char.match(/[，。！？、；："'（）《》【】｛｝·～＠＃￥％＆＊＋－＝＿]/)) {
+                return 'chinese-punctuation';
+            }
+            
+            else if (char.match(/[\u4e00-\u9fff]/)) {
+                return 'cjk-han';
+            }
+            else if (char.match(/[\u3040-\u309F]/) || char.match(/[\u30A0-\u30FF]/) || char.match(/[\u31F0-\u31FF]/) || char.match(/[\uFF66-\uFF9D]/)) {
+                return 'cjk-jp';
+            }
+            else if (char.match(/[\uAC00-\uD7AF]/) || char.match(/[\u1100-\u11FF]/) || char.match(/[\u3130-\u318F]/)) {
+                return 'cjk-kr';
+            }
+            
+            else if (char.match(/\s/)) {
+                return 'space';
+            }
+            
+            else {
+                return 'other';
+            }
+        }
+        function encryptForVerify(text) {
+            const preserveSpaces = preserveSpacesCheckbox.checked;
+            const includeNumbers = includeNumbersCheckbox.checked;
+            const includePunctuation = includePunctuationCheckbox.checked;
+            let res = '';
+            for (let i = 0; i < text.length; i++) {
+                const ch = text[i];
+                const tp = getCharType(ch);
+                let shouldEncrypt = false;
+                if (tp === 'space') {
+                    if (preserveSpaces) { res += ch; continue; } else { shouldEncrypt = true; }
+                } else if (tp === 'number') {
+                    shouldEncrypt = includeNumbers;
+                } else if (tp === 'english-punctuation' || tp === 'chinese-punctuation' || tp === 'western-punctuation') {
+                    shouldEncrypt = includePunctuation;
+                } else if (tp === 'english' || tp === 'latin-ext' || tp === 'cjk-han' || tp === 'cjk-jp' || tp === 'cjk-kr') {
+                    shouldEncrypt = true;
+                }
+                if (!shouldEncrypt) { res += ch; continue; }
+                let emoji = charToEmojiMap[ch];
+                if (!emoji && (tp === 'cjk-han' || tp === 'cjk-jp' || tp === 'cjk-kr')) {
+                    emoji = getEmojiForChineseChar(ch);
+                } else if (!emoji && (tp === 'latin-ext' || tp === 'western-punctuation')) {
+                    emoji = getEmojiForLatinExtChar(ch);
+                }
+                if (emoji) {
+                    if (tp === 'cjk-han' || tp === 'cjk-jp' || tp === 'cjk-kr' || tp === 'latin-ext' || tp === 'western-punctuation') {
+                        const seed = getKeySeed();
+                        const cp = ch.codePointAt(0);
+                        const zws = encodeCpWithKey(cp, seed);
+                        res += (emoji + SENTINEL + zws);
+                    } else {
+                        res += emoji;
+                    }
+                } else {
+                    res += ch;
+                }
+            }
+            return res;
+        }
+        
+        
+        encryptBtn.addEventListener('click', function() {
+            const text = inputText.value;
+            
+            if (!text.trim()) {
+                const msg = (window.i18n && i18n.t) ? i18n.t('notify.encrypt.empty') : '请输入要加密的文本！';
+                showNotification(msg, 'error');
+                return;
+            }
+            if (!smartGuard && isLikelyCipher(text)) {
+                smartGuard = true;
+                showNotification('检测到密文，已自动切换为解密', 'info');
+                decryptBtn.click();
+                smartGuard = false;
+                return;
+            }
+            
+            
+            generateEmojiMapping();
+            
+            const preserveSpaces = preserveSpacesCheckbox.checked;
+            const includeNumbers = includeNumbersCheckbox.checked;
+            const includePunctuation = includePunctuationCheckbox.checked;
+            
+            let result = '';
+            let animalCount = 0;
+            let personCount = 0;
+            
+            for (let i = 0; i < text.length; i++) {
+                const char = text[i];
+                const charType = getCharType(char);
+                
+                
+                let shouldEncrypt = false;
+                
+                if (charType === 'space') {
+                    
+                    if (preserveSpaces) {
+                        result += char;
+                    } else {
+                        shouldEncrypt = true;
+                    }
+                } else if (charType === 'number') {
+                    
+                    shouldEncrypt = includeNumbers;
+                } else if (charType === 'english-punctuation' || charType === 'chinese-punctuation' || charType === 'western-punctuation') {
+                    
+                    shouldEncrypt = includePunctuation;
+                } else if (charType === 'english' || charType === 'latin-ext' || charType === 'cjk-han' || charType === 'cjk-jp' || charType === 'cjk-kr') {
+                    
+                    shouldEncrypt = true;
+                } else {
+                    
+                    shouldEncrypt = false;
+                }
+                
+                if (shouldEncrypt) {
+                    
+                    let emoji = charToEmojiMap[char];
+                    
+                    
+                    if (!emoji && (charType === 'cjk-han' || charType === 'cjk-jp' || charType === 'cjk-kr')) {
+                        emoji = getEmojiForChineseChar(char);
+                    } else if (!emoji && (charType === 'latin-ext' || charType === 'western-punctuation')) {
+                        emoji = getEmojiForLatinExtChar(char);
+                    }
+                    
+                    if (emoji) {
+                        if (charType === 'cjk-han' || charType === 'cjk-jp' || charType === 'cjk-kr' || charType === 'latin-ext' || charType === 'western-punctuation') {
+                            const seed = getKeySeed();
+                            const cp = char.codePointAt(0);
+                            const zws = encodeCpWithKey(cp, seed);
+                            result += (emoji + SENTINEL + zws);
+                        } else {
+                            result += emoji;
+                        }
+                        
+                        
+                        const ae = (currentAnimalEmojis || animalEmojis);
+                        const pe = (currentPersonEmojis || personEmojis);
+                        if (ae.includes(emoji)) {
+                            animalCount++;
+                        } else if (pe.includes(emoji)) {
+                            personCount++;
+                        }
+                    } else {
+                        
+                        result += char;
+                    }
+                } else {
+                    result += char;
+                }
+            }
+            
+            outputText.innerHTML = result || ((window.i18n && i18n.t) ? i18n.t('output.emptyEncrypt') : '加密结果为空');
+            updateStats();
+            updateEmojiGrids();
+            try { saveHistory({ type:'enc', input:text, output: (typeof result === 'string' ? result : '') }); } catch(e){}
+            
+            let message = (window.i18n && i18n.t) ? i18n.t('notify.encrypt.done') : '加密完成！';
+            if (animalCount > 0) {
+                const tpl = (window.i18n && i18n.t) ? i18n.t('notify.encrypt.animals') : '动物表情: {count}个';
+                message += ' ' + tpl.replace('{count}', animalCount);
+            }
+            if (personCount > 0) {
+                const tpl = (window.i18n && i18n.t) ? i18n.t('notify.encrypt.persons') : '人物表情: {count}个';
+                message += ' ' + tpl.replace('{count}', personCount);
+            }
+            showNotification(message);
+        });
+        
+        
+        decryptBtn.addEventListener('click', function() {
+            let text = inputText.value;
+            
+            if (!text.trim()) {
+                const msg = (window.i18n && i18n.t) ? i18n.t('notify.decrypt.empty') : '请输入要解密的文本！';
+                showNotification(msg, 'error');
+                return;
+            }
+            if (!smartGuard && !isLikelyCipher(text)) {
+                smartGuard = true;
+                showNotification('检测到明文，已自动切换为加密', 'info');
+                encryptBtn.click();
+                smartGuard = false;
+                return;
+            }
+            generateEmojiMapping();
+            const cleaned = sanitizeForDecrypt(text);
+            if (cleaned.removed > 0) {
+                text = cleaned.text;
+                inputText.value = text;
+                showNotification(`已自动清理 ${cleaned.removed} 个不可见字符`, 'info');
+            }
+            let result = '';
+            let decryptedCount = 0;
+            
+            const ae = (currentAnimalEmojis || animalEmojis);
+            const pe = (currentPersonEmojis || personEmojis);
+            const maxLen = Math.max(
+                ...ae.map(e => e.length),
+                ...pe.map(e => e.length),
+                2
+            );
+            let i = 0;
+            while (i < text.length) {
+                let matched = false;
+                const tryLen = Math.min(maxLen, text.length - i);
+                for (let len = tryLen; len >= 1; len--) {
+                    const tok = text.substr(i, len);
+                    const isEmoji = pe.includes(tok) || ae.includes(tok);
+                    if (!isEmoji) continue;
+                    const nextIdx = i + len;
+                    if (nextIdx < text.length && text[nextIdx] === SENTINEL) {
+                        const seed = getKeySeed();
+                        let j = nextIdx + 1;
+                        const alphaSet = new Set(zwsAlphabet(seed));
+                        let run = '';
+                        while (j < text.length && alphaSet.has(text[j])) {
+                            run += text[j];
+                            j++;
+                        }
+                        if (run.length > 0) {
+                            const dec = decodeCpWithKey(run, seed);
+                            const cp = dec.cp;
+                            if (cp >= 0 && cp <= 0x10FFFF) {
+                                result += String.fromCodePoint(cp);
+                                decryptedCount++;
+                                i = j;
+                                matched = true;
+                                break;
+                            }
+                        }
+                    }
+                    const mapped = getCharForEmoji(tok);
+                    if (mapped) {
+                        result += mapped;
+                        decryptedCount++;
+                        i += len;
+                        matched = true;
+                        break;
+                    }
+                }
+                if (!matched) {
+                    result += text[i];
+                    i++;
+                }
+            }
+            
+            outputText.textContent = result || ((window.i18n && i18n.t) ? i18n.t('output.emptyDecrypt') : '解密结果为空');
+            updateStats();
+            try { saveHistory({ type:'dec', input:text, output: (typeof result === 'string' ? result : '') }); } catch(e){}
+            const tpl = (window.i18n && i18n.t) ? i18n.t('notify.decrypt.done') : '解密完成！共解密了 {count} 个表情。';
+            showNotification(tpl.replace('{count}', decryptedCount));
+            try {
+                const recon = encryptForVerify(result);
+                if (recon !== text) {
+                    let pos = 0;
+                    const n = Math.min(recon.length, text.length);
+                    while (pos < n && recon[pos] === text[pos]) pos++;
+                    const hint = `解密可能不完整，差异位置约在 ${pos+1}。可能原因：密钥不一致、密文被破坏或跨平台复制。`;
+                    showNotification(hint, 'info');
+                }
+            } catch(e){}
+        });
+        
+        
+        copyBtn.addEventListener('click', function() {
+            if (!outputText.textContent || outputText.textContent === outputPlaceholder()) {
+                const msg = (window.i18n && i18n.t) ? i18n.t('notify.copy.empty') : '没有内容可复制！';
+                showNotification(msg, 'error');
+                return;
+            }
+            
+            
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = outputText.textContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+            
+            const msg = (window.i18n && i18n.t) ? i18n.t('notify.copied') : '已复制到剪贴板！';
+            showNotification(msg);
+        });
+        
+        
+        clearBtn.addEventListener('click', function() {
+            inputText.value = '';
+            outputText.textContent = outputPlaceholder();
+            updateStats();
+            const msg = (window.i18n && i18n.t) ? i18n.t('notify.cleared') : '已清空所有内容！';
+            showNotification(msg);
+        });
+        
+        swapBtn.addEventListener('click', function() {
+            const temp = inputText.value;
+            inputText.value = outputText.textContent === outputPlaceholder() ? "" : outputText.textContent;
+            outputText.textContent = temp || outputPlaceholder();
+            updateStats();
+            const msg = (window.i18n && i18n.t) ? i18n.t('notify.swapped') : '已交换输入和输出文本！';
+            showNotification(msg);
+        });
+        
+        if (importBtn && fileInput) {
+            importBtn.addEventListener('click', function() { fileInput.click(); });
+            fileInput.addEventListener('change', function(e){
+                const f = e.target.files && e.target.files[0];
+                if (!f) return;
+                if (f.type && f.type.startsWith('image/')) {
+                    showNotification(`已导入图片 ${f.name}`);
+                    fileInput.value = '';
+                } else {
+                    const reader = new FileReader();
+                    reader.onload = function(evt){
+                        inputText.value = evt.target.result || '';
+                        updateStats();
+                        showNotification(`已导入 ${f.name}`);
+                        fileInput.value = '';
+                    };
+                    reader.readAsText(f, 'utf-8');
+                }
+            });
+        }
+        if (exportBtn) {
+            exportBtn.addEventListener('click', function(){
+                let text = outputText.textContent && outputText.textContent !== outputPlaceholder() ? outputText.textContent : inputText.value;
+                if (!text) { showNotification('没有可导出的内容', 'error'); return; }
+                const blob = new Blob([text], { type:'text/plain;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url; a.download = 'cipher.txt'; a.click();
+                URL.revokeObjectURL(url);
+                showNotification('已导出TXT');
+            });
+        }
+        // 导出图片：弹窗选项（移动端友好）
+        const exportModal = document.getElementById('exportModal');
+        const optIncludeQR = document.getElementById('optIncludeQR');
+        
+        const exportDoBtn = document.getElementById('exportDoBtn');
+        const exportCancelBtn = document.getElementById('exportCancelBtn');
+        function exportImageWithOptions(includeQR){
+            const text = (outputText.textContent && outputText.textContent !== outputPlaceholder()) ? outputText.textContent : inputText.value;
+            if (!text) { showNotification('没有可导出的内容', 'error'); return; }
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                // 基础参数（将导出为正方形，圆角）
+                let dim = 560; // 初始边长
+                const maxDim = 1400; // 上限，避免过大
+                const padding = 22;
+                let fontSize = 20;
+                let lineHeight = 28;
+                function wrapLines(width) {
+                  ctx.font = `${fontSize}px Segoe UI, Arial, sans-serif`;
+                  const words = text.split('');
+                  const lines = [];
+                  let line = '';
+                  const maxWidth = width - padding*2;
+                  for (const ch of words) {
+                      const test = line + ch;
+                      if (ctx.measureText(test).width > maxWidth) { lines.push(line); line = ch; }
+                      else { line = test; }
+                  }
+                  if (line) lines.push(line);
+                  return lines;
+                }
+                // 迭代计算，使文本+底部区域可以装入正方形
+                let lines = wrapLines(dim);
+                let qrSize = includeQR ? Math.min(300, Math.round(dim * 0.30)) : 0;
+                let footerH = includeQR ? Math.max(68, qrSize + 20) : 52;
+                let required = padding*2 + lines.length * lineHeight + footerH;
+                let guard = 0;
+                while (required > dim && dim < maxDim && guard < 8) {
+                  dim = Math.min(maxDim, Math.max(required, Math.round(dim * 1.15)));
+                  qrSize = includeQR ? Math.min(300, Math.round(dim * 0.30)) : 0;
+                  footerH = includeQR ? Math.max(68, qrSize + 20) : 52;
+                  lines = wrapLines(dim);
+                  required = padding*2 + lines.length * lineHeight + footerH;
+                  guard++;
+                }
+                canvas.width = canvas.height = dim; // 正方形
+                const ctx2 = canvas.getContext('2d');
+                ctx2.imageSmoothingEnabled = false;
+                // 圆角裁剪
+                const radius = 20;
+                ctx2.save();
+                ctx2.beginPath();
+                ctx2.moveTo(radius, 0);
+                ctx2.arcTo(dim, 0, dim, dim, radius);
+                ctx2.arcTo(dim, dim, 0, dim, radius);
+                ctx2.arcTo(0, dim, 0, 0, radius);
+                ctx2.arcTo(0, 0, dim, 0, radius);
+                ctx2.closePath();
+                ctx2.clip();
+                // 背景
+                ctx2.fillStyle = '#2c3e50';
+                ctx2.fillRect(0,0,dim,dim);
+                ctx2.fillStyle = '#ffffff';
+                ctx2.font = `${fontSize}px Segoe UI, Arial, sans-serif`;
+                let y = padding;
+                for (const ln of lines) {
+                    y += lineHeight;
+                    ctx2.fillText(ln, padding, y);
+                }
+                // 提示：可见二维码保留提示
+                if (includeQR) {
+                  ctx2.fillStyle = 'rgba(255,255,255,0.85)';
+                  ctx2.font = '14px Segoe UI, Arial, sans-serif';
+                  ctx2.fillText('提示：含二维码，可相机扫描', padding, dim - 16);
+                } else {
+                  ctx2.fillStyle = 'rgba(255,255,255,0.8)';
+                  ctx2.font = '14px Segoe UI, Arial, sans-serif';
+                  ctx2.fillText('提示：图片用于分享展示，解密需复制文字或同时发送TXT/链接', padding, dim - 18);
+                }
+                const finish = () => {
+                    ctx2.restore(); // 结束圆角裁剪状态
+                    canvas.toBlob(function(blob){
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url; a.download = 'result.png'; a.click();
+                        URL.revokeObjectURL(url);
+                    }, 'image/png');
+                    showNotification('已导出图片');
+                };
+                if (!includeQR) { finish(); return; }
+                try {
+                    const url = getShareURL(true);
+                    const img = new Image();
+                    img.crossOrigin = 'anonymous';
+                    const size = qrSize;
+                    img.onload = function() {
+                        const qrSize = size;
+                        const quietSafe = 28;
+                        const margin = Math.max(28, quietSafe + radius);
+                        const x = dim - qrSize - margin;
+                        const y2 = dim - qrSize - margin;
+                        // 可见二维码：直接绘制
+                        ctx2.drawImage(img, x, y2, qrSize, qrSize);
+                        finish();
+                    };
+                    img.onerror = function(){ showNotification('二维码生成失败，已导出无二维码图片','error'); finish(); };
+                    const bg = 'FFFFFF';
+                    const fg = '111827';
+                    img.src = 'https://api.qrserver.com/v1/create-qr-code/?size='+size+'x'+size+'&ecc=H&margin=6&bgcolor='+bg+'&color='+fg+'&data='+encodeURIComponent(url);
+                } catch(e) { finish(); }
+        }
+        if (exportPngBtn && exportModal && optIncludeQR && exportDoBtn && exportCancelBtn) {
+            exportPngBtn.addEventListener('click', function(){
+                optIncludeQR.checked = false;
+                exportModal.style.display = 'flex';
+            });
+            exportCancelBtn.addEventListener('click', function(){ exportModal.style.display = 'none'; });
+            exportModal.addEventListener('click', function(e){ if (e.target === exportModal) exportModal.style.display = 'none'; });
+            exportDoBtn.addEventListener('click', function(){
+                const includeQR = !!optIncludeQR.checked;
+                exportModal.style.display = 'none';
+                exportImageWithOptions(includeQR);
+            });
+        }
+        
+        if (shareQrBtn) {
+            shareQrBtn.addEventListener('click', function(){
+                try {
+                    const url = getShareURL(true);
+                    const api = 'https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=' + encodeURIComponent(url);
+                    if (qrImg) qrImg.src = api;
+                    if (qrModal) qrModal.style.display = 'flex';
+                    if (qrCopyLink) {
+                        qrCopyLink.onclick = function(){
+                            const ta = document.createElement('textarea');
+                            ta.value = url; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+                            showNotification('已复制分享链接');
+                        };
+                    }
+                } catch(e) {
+                    showNotification('生成二维码失败','error');
+                }
+            });
+        }
+        if (qrClose && qrModal) {
+            qrClose.addEventListener('click', function(){ qrModal.style.display = 'none'; });
+            qrModal.addEventListener('click', function(e){ if (e.target === qrModal) qrModal.style.display = 'none'; });
+        }
+        // 快捷键
+        document.addEventListener('keydown', function(e){
+            if (e.ctrlKey && e.key.toLowerCase() === 'e') { e.preventDefault(); encryptBtn.click(); }
+            if (e.ctrlKey && e.key.toLowerCase() === 'd') { e.preventDefault(); decryptBtn.click(); }
+            if (e.ctrlKey && e.key.toLowerCase() === 'k') { e.preventDefault(); if (secretKeyInput) secretKeyInput.focus(); }
+        });
+        if (inputText) {
+            inputText.addEventListener('keydown', function(e){
+                if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); encryptBtn.click(); }
+                else if (e.key === 'Enter' && e.shiftKey) { e.preventDefault(); decryptBtn.click(); }
+            });
+        }
+        
+        testBtn.addEventListener('click', function() {
+            const testText = "你好世界！Hello World! 123 这是一段测试文本。";
+            inputText.value = testText;
+            
+            
+            setTimeout(() => {
+                encryptBtn.click();
+                
+                
+                setTimeout(() => {
+                    const encryptedText = outputText.textContent;
+                    console.log("加密结果:", encryptedText);
+                    
+                    
+                    swapBtn.click();
+                    
+                    
+                    setTimeout(() => {
+                        decryptBtn.click();
+                        
+                        
+                        setTimeout(() => {
+                            const decryptedText = outputText.textContent;
+                            const success = testText === decryptedText;
+                            
+                            if (success) {
+                                const msg = (window.i18n && i18n.t) ? i18n.t('notify.test.success') : '测试成功！加密解密完全正确。';
+                                showNotification(msg, 'info');
+                            } else {
+                                const msg = (window.i18n && i18n.t) ? i18n.t('notify.test.failure') : '测试失败！原文和解密后文本不一致。';
+                                showNotification(msg, 'error');
+                            }
+                        }, 100);
+                    }, 100);
+                }, 100);
+            }, 100);
+        });
+        
+        
+        
+        
+       
+        exampleBtn.addEventListener('click', function() {
+            const examples = [
+                "你好世界！Hello World! 123 这是一段测试文本。",
+                "数字：1234567890，英文：ABCDEFG abcdefg，中文：中华人民共和国",
+                "标点符号测试：!@#$%^&*()，中文标点：，。！？",
+                "混合文本：Hello 你好！123 数字，标点符号：,.;:!?",
+                "加密测试：这是一段包含数字123和英文ABC的中文文本。"
+            ];
+            
+            const randomExample = examples[Math.floor(Math.random() * examples.length)];
+            inputText.value = randomExample;
+            updateStats();
+            const msg = (window.i18n && i18n.t) ? i18n.t('notify.exampleLoaded') : '已加载示例文本！';
+            showNotification(msg, 'info');
+        });
+        
+       
+        function showNotification(message, type = 'success') {
+            notification.textContent = message;
+            
+            
+            if (type === 'error') {
+                notification.style.background = 'rgba(255, 94, 98, 0.9)';
+            } else if (type === 'info') {
+                notification.style.background = 'rgba(78, 205, 196, 0.9)';
+            } else {
+                notification.style.background = 'rgba(255, 153, 102, 0.9)';
+            }
+            
+            notification.classList.add('show');
+            
+            setTimeout(function() {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+        function saveHistory(entry) {
+            try {
+                const key = 'cyq_history';
+                const arr = JSON.parse(localStorage.getItem(key) || '[]');
+                arr.unshift({ t: Date.now(), ...entry });
+                while (arr.length > 10) arr.pop();
+                localStorage.setItem(key, JSON.stringify(arr));
+                renderHistory();
+            } catch(e){}
+        }
+        function renderHistory() {
+            const el = document.getElementById('historyPanel');
+            if (!el) return;
+            let arr = [];
+            try { arr = JSON.parse(localStorage.getItem('cyq_history') || '[]'); } catch(e){}
+            if (!arr.length) { el.innerHTML = '<div style="color:#9aa4b2">'+((window.i18n&&i18n.t)?i18n.t('history.none'):'暂无记录')+'</div>'; return; }
+            el.innerHTML = arr.slice(0,5).map((it, idx) => {
+                const typ = it.type === 'enc' ? ((window.i18n&&i18n.t)?i18n.t('history.enc'):'加密') : ((window.i18n&&i18n.t)?i18n.t('history.dec'):'解密');
+                const preview = (it.output || '').slice(0, 50).replace(/[<>&]/g, s => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[s]));
+                return `<div style="border:1px solid rgba(255,255,255,0.08);padding:8px;border-radius:6px;display:flex;justify-content:space-between;gap:8px;align-items:center">
+                    <div style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${idx+1}. [${typ}] ${preview}</div>
+                    <div style="display:flex;gap:6px">
+                        <button class="encrypt-btn" data-act="apply" data-idx="${idx}"><i class="fas fa-arrow-left"></i> ${(window.i18n&&i18n.t)?i18n.t('history.apply'):'复用'}</button>
+                        <button class="encrypt-btn" data-act="copy" data-idx="${idx}"><i class="far fa-copy"></i> ${(window.i18n&&i18n.t)?i18n.t('buttons.copy'):'复制'}</button>
+                    </div>
+                </div>`;
+            }).join('');
+            el.querySelectorAll('button').forEach(btn => {
+                btn.addEventListener('click', function(){
+                    const act = this.getAttribute('data-act');
+                    const idx = parseInt(this.getAttribute('data-idx'), 10);
+                    let list = [];
+                    try { list = JSON.parse(localStorage.getItem('cyq_history') || '[]'); } catch(e){}
+                    const it = list[idx];
+                    if (!it) return;
+                    if (act === 'apply') { inputText.value = it.output || ''; updateStats(); showNotification((window.i18n&&i18n.t)?i18n.t('notify.applied'):'已将结果填入输入框'); }
+                    if (act === 'copy') {
+                        const ta = document.createElement('textarea');
+                        ta.value = it.output || ''; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+                        showNotification((window.i18n&&i18n.t)?i18n.t('notify.copied'):'已复制');
+                    }
+                });
+            });
+        }
+        renderHistory();
+        (function bindClearHistory(){
+            const btn = document.getElementById('clearHistoryBtn');
+            const modal = document.getElementById('clearModal');
+            const ok = document.getElementById('clearConfirmBtn');
+            const cancel = document.getElementById('clearCancelBtn');
+            if (!btn || !modal || !ok || !cancel) return;
+            btn.addEventListener('click', function(){ modal.style.display='flex'; });
+            cancel.addEventListener('click', function(){ modal.style.display='none'; });
+            modal.addEventListener('click', function(e){ if (e.target===modal) modal.style.display='none'; });
+            ok.addEventListener('click', function(){
+                try {
+                    localStorage.removeItem('cyq_history');
+                    renderHistory();
+                    showNotification((window.i18n&&i18n.t)?i18n.t('notify.historyCleared'):'已清除最近记录','info');
+                } catch(e) {
+                    showNotification((window.i18n&&i18n.t)?i18n.t('notify.failed'):'清除失败','error');
+                }
+                modal.style.display='none';
+            });
+        })();
+    </script>
+<!-- baidutongji -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?302f38f44d6f32408b60595f99ab4b1c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

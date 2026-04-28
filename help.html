@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-i18n-root="1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="help.title">使用帮助 - 常友圈</title>
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="stylesheet" href="/fontawesome6.4/css/all.min.css">
+  <link rel="stylesheet" href="/fontawesome6.4/app-controls.css">
+  <script src="/i18n/i18n.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="page-header" style="position:relative">
+      <a class="logo" id="homeLogo" href="/"><img src="/logo.png" alt=""><strong data-i18n="app.title">常友圈 表情密文翻译器</strong></a>
+      <div class="control-bar">
+        <button id="themeToggle" class="icon-btn dark" title="Theme"><i class="far fa-moon"></i></button>
+        <div class="lang-menu-wrapper">
+          <button id="langBtn" class="icon-btn dark" title="Language"><i class="fas fa-language"></i></button>
+          <div id="langMenu" class="lang-menu"></div>
+        </div>
+        <a class="btn" id="homeLink" href="/"><i class="fa-solid fa-house"></i> <span data-i18n="nav.home">返回首页</span></a>
+        <a class="btn" id="aboutLink" href="/about.html"><i class="fa-solid fa-circle-info"></i> <span data-i18n="nav.about">关于我们</span></a>
+      </div>
+    </header>
+    <div class="panel">
+      <h2><i class="fa-solid fa-rocket"></i> <span data-i18n="help.quickStart.title">一分钟上手</span></h2>
+      <div class="grid">
+        <div>
+          <div class="step"><div class="num">1</div><div>
+            <strong data-i18n="help.quickStart.step1.title">选择语言与主题</strong>
+            <p data-i18n="help.quickStart.step1.text">右上角切换界面语言；点月亮/太阳切换夜间或日间。</p>
+          </div></div>
+          <div class="step"><div class="num">2</div><div>
+            <strong data-i18n="help.quickStart.step2.title">输入文本</strong>
+            <p data-i18n="help.quickStart.step2.text">在“输入文本”中粘贴或输入要处理的内容，支持中文、英文、数字与标点。</p>
+          </div></div>
+          <div class="step"><div class="num">3</div><div>
+            <strong data-i18n="help.quickStart.step3.title">设置密钥（可选）</strong>
+            <p data-i18n="help.quickStart.step3.text">在“高级设置”中输入加密密钥，旁边会显示强度提示；保持一致即可解密。</p>
+          </div></div>
+        </div>
+        <div>
+          <div class="step"><div class="num">4</div><div>
+            <strong data-i18n="help.quickStart.step4.title">加密 / 解密</strong>
+            <p data-i18n="help.quickStart.step4.text">点击“加密”生成表情密文；点击“解密”还原文本。支持 Ctrl+E / Ctrl+D 快捷键。</p>
+          </div></div>
+          <div class="step"><div class="num">5</div><div>
+            <strong data-i18n="help.quickStart.step5.title">复制 / 导入 / 导出</strong>
+            <p data-i18n="help.quickStart.step5.text">使用“复制结果”复制；“导入文件”支持 TXT/MD；“导出TXT/导出图片”保存结果。</p>
+          </div></div>
+          <div class="step"><div class="num">6</div><div>
+            <strong data-i18n="help.quickStart.step6.title">分享与二维码</strong>
+            <p data-i18n="help.quickStart.step6.text">点“分享我们”生成链接与二维码；导出图片可选择是否包含“可见二维码”。</p>
+          </div></div>
+        </div>
+      </div>
+      <p class="tip" data-i18n="help.quickStart.tip">提示：如需便于他人识别，可在导出时勾选“包含二维码”。</p>
+    </div>
+    <div class="panel">
+      <h2><i class="fa-solid fa-keyboard"></i> <span data-i18n="help.emojiInput.title">表情输入方法</span></h2>
+      <p data-i18n="help.emojiInput.win" data-i18n-html="1"><strong>Windows</strong>：按 Win + . 打开表情面板，直接点击表情即可输入。</p>
+      <p data-i18n="help.emojiInput.mac" data-i18n-html="1"><strong>macOS</strong>：按 Ctrl + Cmd + Space 打开表情面板。</p>
+      <p data-i18n="help.emojiInput.ios" data-i18n-html="1"><strong>iPhone/iPad</strong>：系统键盘切换到 Emoji；长按常用表情可选择变体。</p>
+      <p data-i18n="help.emojiInput.android" data-i18n-html="1"><strong>Android</strong>：切换到手机键盘的 Emoji 面板（各品牌略有差异）。</p>
+      <p class="tip" data-i18n="help.emojiInput.tip">在我们的页面，你也可以点击“复用”把历史结果直接放回输入框，无需手动输入表情。</p>
+    </div>
+    <div class="panel">
+      <h2><i class="fa-solid fa-list-check"></i> <span data-i18n="help.faq.title">常见问题</span></h2>
+      <p data-i18n="help.faq.q1" data-i18n-html="1"><strong>Q：加密后看不到文字怎么办？</strong><br>在“复制结果”按钮下方的结果区可查看密文；或点击“交换文本”将结果放回输入框。</p>
+      <p data-i18n="help.faq.q2" data-i18n-html="1"><strong>Q：导出的图片怎么解密？</strong><br>如果图片包含可见二维码，可直接扫码；否则复制图片中的文字回到页面解密。</p>
+      <p data-i18n="help.faq.q3" data-i18n-html="1"><strong>Q：多语言失败是功能异常吗？</strong><br>不是。只要“加密→解密”能还原原文，就可以放心使用。</p>
+    </div>
+    <div class="panel">
+      <h2><i class="fa-solid fa-handshake-angle"></i> <span data-i18n="help.contact.title">联系我们</span></h2>
+      <p data-i18n="help.contact.text">如果你有更好的建议，请与我们联系：webmaster#3520.net（@）。</p>
+    </div>
+    <footer class="page-footer" data-i18n="footer.copyright">© 2026 常友圈 - 表情密文翻译器</footer>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', async function(){
+      if (!window.i18n) return;
+      await i18n.init({ defaultLang: 'zh' });
+      // Ensure path is /{lang}/help.html
+      try{
+        var lang = i18n.current || 'zh';
+        var path = window.location.pathname || '/help.html';
+        var target = '/' + lang + '/help.html';
+        if (!/^\/(zh|zh\-TW|en|es|fr|de|ja|ko)\/help\.html$/.test(path)) {
+          window.history.replaceState(null,'',target);
+        }
+        // Build language menu and links
+        var langMenu = document.getElementById('langMenu');
+        var langBtn = document.getElementById('langBtn');
+        function buildLangMenu(){
+          if (!langMenu) return;
+          var current = i18n.current || 'zh';
+          var labels = {
+            'zh': i18n.t('lang.zh') || '中文',
+            'zh-TW': i18n.t('lang.zh-TW') || '繁體中文',
+            'en': i18n.t('lang.en') || 'English',
+            'es': i18n.t('lang.es') || 'Español',
+            'fr': i18n.t('lang.fr') || 'Français',
+            'de': i18n.t('lang.de') || 'Deutsch',
+            'ja': i18n.t('lang.ja') || '日本語',
+            'ko': i18n.t('lang.ko') || '한국어'
+          };
+          var order = ['zh','zh-TW','en','es','fr','de','ja','ko'];
+          var items = order.map(function(code){
+            var isActive = code===current ? ' active' : '';
+            return '<div class="lang-item'+isActive+'" data-code="'+code+'"'+(isActive?' data-active="1"':'')+'><span class="label">'+labels[code]+'</span></div>';
+          }).join('');
+          langMenu.innerHTML = items;
+        }
+        function wireLangMenu(){
+          if (langBtn) {
+            langBtn.addEventListener('click', function(e){ e.stopPropagation(); langMenu.classList.toggle('open'); });
+            document.addEventListener('click', function(){ langMenu.classList.remove('open'); });
+          }
+          if (langMenu) {
+            langMenu.addEventListener('click', function(e){
+              var item = e.target.closest('.lang-item'); if (!item) return;
+              if (item.getAttribute('data-active')==='1'){ langMenu.classList.remove('open'); return; }
+              var code = item.getAttribute('data-code');
+              i18n.setLanguage(code).then(function(){
+                buildLangMenu();
+                updateLinks();
+                updateThemeIcon();
+                window.history.replaceState(null,'','/'+code+'/help.html');
+              });
+              langMenu.classList.remove('open');
+            });
+          }
+        }
+        function updateLinks(){
+          var code = i18n.current || 'zh';
+          var homeLogo = document.getElementById('homeLogo');
+          var homeLink = document.getElementById('homeLink');
+          var aboutLink = document.getElementById('aboutLink');
+          if (homeLogo) homeLogo.href = '/' + code + '/';
+          if (homeLink) homeLink.href = '/' + code + '/';
+          if (aboutLink) aboutLink.href = '/' + code + '/about.html';
+        }
+        function updateThemeIcon(){
+          var btn = document.getElementById('themeToggle'); if (!btn) return;
+          var icon = btn.querySelector('i'); if (!icon) return;
+          icon.className = document.body.classList.contains('theme-light') ? 'far fa-sun' : 'far fa-moon';
+        }
+        // Theme toggle
+        var themeToggle = document.getElementById('themeToggle');
+        if (themeToggle){
+          try{
+            var saved = localStorage.getItem('theme');
+            if (saved==='light') document.body.classList.add('theme-light');
+          }catch(e){}
+          updateThemeIcon();
+          themeToggle.addEventListener('click', function(){
+            document.body.classList.toggle('theme-light');
+            try{ localStorage.setItem('theme', document.body.classList.contains('theme-light')?'light':'dark'); }catch(e){}
+            updateThemeIcon();
+          });
+        }
+        buildLangMenu();
+        wireLangMenu();
+        updateLinks();
+      }catch(e){}
+    });
+  </script>
+<!-- baidutongji -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?302f38f44d6f32408b60595f99ab4b1c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

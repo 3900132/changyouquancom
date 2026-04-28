@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="icon" type="image/png" href="/logo.png">
+  <title data-i18n="about.title">关于我们 - 常友圈</title>
+  <link rel="stylesheet" href="/fontawesome6.4/css/all.min.css">
+  <link rel="stylesheet" href="/fontawesome6.4/app-controls.css">
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <a class="logo" id="homeLogo" href="/index.html">
+        <img src="/logo.png" alt=""><strong data-i18n="app.title">常友圈 - 表情密文翻译器</strong>
+      </a>
+      <div class="control-bar">
+        <button id="themeToggle" class="icon-btn dark" title="Theme"><i class="far fa-moon"></i></button>
+        <div class="lang-menu-wrapper">
+          <button id="langBtn" class="icon-btn dark" title="Language"><i class="fas fa-language"></i></button>
+          <div id="langMenu" class="lang-menu"></div>
+        </div>
+        <a class="btn" id="homeLink" href="/"><i class="fa-solid fa-house"></i> <span data-i18n="nav.home">返回首页</span></a>
+        <a class="btn" id="helpLink" href="/help.html"><i class="fa-solid fa-circle-question"></i> <span data-i18n="nav.help">使用帮助</span></a>
+      </div>
+    </header>
+    <main>
+      <h1 data-i18n="about.title">常友圈 表情密文翻译器</h1>
+      <div id="aboutContent"></div>
+      <p data-i18n="help.contact.text">如果你有更好的建议，请和我们取得联系：webmaster#3520.net（@）</p>
+    </main>
+    <footer class="page-footer"></footer>
+  </div>
+  <script src="/i18n/i18n.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async function(){
+      let lang = 'zh';
+      if (window.i18n) {
+        await i18n.init({ defaultLang: 'zh' });
+        lang = i18n.current || 'zh';
+      }
+      history.replaceState(null, '', '/' + lang + '/about.html');
+      renderAbout();
+      buildLangMenu();
+      wireLangMenu();
+      initTheme();
+      updateLinks();
+    });
+    function renderAbout(){
+      const box = document.getElementById('aboutContent');
+      if (!box || !window.i18n) return;
+      box.innerHTML = '';
+      const paras = (typeof i18n.getArray === 'function') ? i18n.getArray('about.paragraphs') : [];
+      paras.forEach(p => {
+        const el = document.createElement('p');
+        el.textContent = p;
+        box.appendChild(el);
+      });
+      try{
+        const desc = i18n.t('meta.description');
+        let md = document.querySelector('meta[name="description"]');
+        if (!md) { md=document.createElement('meta'); md.setAttribute('name','description'); document.head.appendChild(md); }
+        md.setAttribute('content', desc);
+      }catch(e){}
+    }
+    function updateLinks(){
+      var code = (window.i18n && i18n.current) ? i18n.current : 'zh';
+      var homeLogo = document.getElementById('homeLogo');
+      var homeLink = document.getElementById('homeLink');
+      var helpLink = document.getElementById('helpLink');
+      if (homeLogo) homeLogo.href = '/' + code + '/';
+      if (homeLink) homeLink.href = '/' + code + '/';
+      if (helpLink) helpLink.href = '/' + code + '/help.html';
+    }
+    function initTheme(){
+      try {
+        if (localStorage.getItem('theme') === 'light') document.body.classList.add('theme-light');
+      } catch(e){}
+      const btn = document.getElementById('themeToggle');
+      function updateIcon(){
+        const icon = btn && btn.querySelector('i');
+        if (!icon) return;
+        icon.className = document.body.classList.contains('theme-light') ? 'far fa-sun' : 'far fa-moon';
+      }
+      updateIcon();
+      if (btn) btn.addEventListener('click', function(){
+        document.body.classList.toggle('theme-light');
+        try { localStorage.setItem('theme', document.body.classList.contains('theme-light') ? 'light' : 'dark'); } catch(e){}
+        updateIcon();
+      });
+    }
+    function buildLangMenu(){
+      const menu = document.getElementById('langMenu'); if (!menu || !window.i18n) return;
+      const cur = i18n.current || 'zh';
+      const items = [
+        { code:'zh', label:(i18n.t('lang.zh')||'中文') },
+        { code:'zh-TW', label:(i18n.t('lang.zh-TW')||'繁體中文') },
+        { code:'en', label:(i18n.t('lang.en')||'English') },
+        { code:'es', label:(i18n.t('lang.es')||'Español') },
+        { code:'fr', label:(i18n.t('lang.fr')||'Français') },
+        { code:'de', label:(i18n.t('lang.de')||'Deutsch') },
+        { code:'ja', label:(i18n.t('lang.ja')||'日本語') },
+        { code:'ko', label:(i18n.t('lang.ko')||'한국어') }
+      ];
+      menu.innerHTML = items.map(it => `<div class="lang-item${it.code===cur?' active':''}" data-code="${it.code}"><span class="label">${it.label}</span></div>`).join('');
+    }
+    function wireLangMenu(){
+      const btn = document.getElementById('langBtn');
+      const menu = document.getElementById('langMenu');
+      if (btn) btn.addEventListener('click', function(e){ e.stopPropagation(); if (menu) menu.classList.toggle('open'); });
+      if (menu) menu.addEventListener('click', async function(e){
+        const item = e.target.closest('.lang-item'); if (!item) return;
+        const code = item.getAttribute('data-code');
+        if (window.i18n) { await i18n.setLanguage(code); renderAbout(); buildLangMenu(); updateLinks(); history.replaceState(null,'','/'+code+'/about.html'); }
+        menu.classList.remove('open');
+      });
+      document.addEventListener('click', function(){ if (menu) menu.classList.remove('open'); });
+    }
+  </script>
+<!-- baidutongji -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?302f38f44d6f32408b60595f99ab4b1c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

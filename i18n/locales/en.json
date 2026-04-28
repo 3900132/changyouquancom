@@ -1,0 +1,173 @@
+{
+  "app": { "title": "Emoji Cipher Translator - Changyou Circle" },
+  "nav": { "home": "Home", "help": "Help", "about": "About" },
+  "meta": {
+    "description": "Official site of Changyou Circle Emoji Cipher Translator — supports 8 languages (Simplified/Traditional Chinese, English, Korean, Japanese, German, French, Spanish). Convert text ⇄ emoji codes both ways, set a private key for secure, discreet communication. No signup, one‑click text→emoji ciphers. Great for chats, private messages, and cross‑border conversations — fun and secure."
+  },
+  "lang": { "label": "Language", "zh": "Chinese (Simplified)", "zh-TW": "Chinese (Traditional)", "en": "English", "es": "Español", "fr": "Français", "de": "Deutsch", "ja": "日本語", "ko": "한국어" },
+  "theme": { "label": "Theme", "light": "Switch to Light Mode", "dark": "Switch to Dark Mode" },
+  "header": {
+    "title": "Changyou Circle Emoji Encryptor",
+    "subtitle": "Encrypts CJK characters (Chinese, Japanese, Korean) and Latin letters (English, Spanish, French, German), plus numbers and punctuation."
+  },
+  "input": {
+    "panelTitle": "Input Text",
+    "label": "Enter text to encrypt/decrypt"
+  },
+  "placeholders": [
+    "Type text to encrypt... e.g., Hello World! 123",
+    "Enter text to encrypt or decrypt... Supports English, numbers and symbols",
+    "You can input English letters, numbers or emojis to encrypt/decrypt",
+    "Try typing: This is a test. 123",
+    "Mixed text supported: English 123 ! @ #"
+  ],
+  "hints": {
+    "input": "Tip: After entering text, click a button below to encrypt or decrypt",
+    "output": "Tip: Click \"Copy Result\" to copy, or \"Swap Text\" to move the result back",
+    "stats": "Tip: Encrypts CJK and Latin (with diacritics) plus punctuation",
+    "secretLine": "Use it discreetly; don’t tell others unless you add another password.",
+    "secretLine2": "Share keys only with trusted people; content without a key isn’t for sensitive communication."
+  },
+  "guide": {
+    "title": "How to Use",
+    "step1": "Choose the interface language at top-right (Chinese, Traditional Chinese, English, Spanish, French, German, Japanese, Korean).",
+    "step2": "Optional: enter an Encryption Key (e.g., 123). The key shuffles the emoji map so only people with the same key can decrypt.",
+    "step3": "Enter your text (supports CJK and Latin letters; punctuation optional).",
+    "step4": "Click “Encrypt to Emojis” to encrypt; click “Decrypt to Text” to restore.",
+    "step5": "Share the result and the same key with your friend; otherwise decryption will fail."
+  },
+  "about": {
+    "title": "Changyou Circle • Emoji Cipher Translator",
+    "paragraphs": [
+      "Want to send small secrets in chats without others noticing? Want to make ordinary messages playful? This tool turns your text into a string of emojis. Anyone who receives the emoji string can paste it here to get the original text — using emojis as a ‘cipher’ for chatting.",
+      "It’s dead simple: open the site, type your text, pick a language, tap Encrypt — text becomes an emoji string. Got an emoji cipher from a friend? Paste it and tap Decrypt to restore the text. No learning curve — even first‑timers get it in one try.",
+      "We support 8 languages (Simplified/Traditional Chinese, English, Korean, Japanese, plus German, French, Spanish). Use emoji ciphers across languages without worry.",
+      "The most useful part is the private key. It’s like adding a lock to your emoji cipher. After you set a key, only people who know the same key can decrypt to the original text. From sharing secrets and personal greetings to sensitive work notes or cross‑border chats, this gives you peace of mind.",
+      "No signup, no login — just type, choose language, (optionally) set a key, and encrypt. It takes half a minute and fits both fun and practical use.",
+      "Unlike ordinary emoji generators, this balances fun and security. It keeps chatting lively while enabling encrypted communication and multi‑language support. Send ‘ciphers’ with emojis and guard privacy with your key — a fresh way to chat.",
+      "Whether you want more fun in daily chats, playful ‘cipher’ interactions with friends, private communication, or frequent chats with overseas friends, this translator helps. Hide text in emojis and keep privacy safe with a simple flow."
+    ]
+  },
+  "settings": {
+    "title": "Advanced Settings",
+    "key": "Encryption Key",
+    "keyPlaceholder": "Enter key (e.g., 123)",
+    "preserveSpaces": "Preserve spaces and line breaks",
+    "includeNumbers": "Encrypt numbers",
+    "includePunctuation": "Encrypt punctuation",
+    "keyUnset": "(Key not set)",
+    "keyWeak": "(Weak key)",
+    "keyMedium": "(Medium key)",
+    "keyStrong": "(Strong key)"
+  },
+  "buttons": {
+    "encrypt": "Encrypt to Emojis",
+    "decrypt": "Decrypt to Text",
+    "test": "Test Encrypt/Decrypt",
+    "multiTest": "Multi-language Self Test",
+    "example": "Load Example",
+    "copy": "Copy Result",
+    "clear": "Clear",
+    "swap": "Swap Text",
+    "import": "Import File",
+    "exportTxt": "Export TXT",
+    "exportPng": "Export Image",
+    "share": "Share",
+    "copyLink": "Copy Link"
+  },
+  "actions": { "cancel": "Cancel", "export": "Export", "close": "Close" },
+  "output": {
+    "panelTitle": "Output",
+    "placeholder": "Encrypted or decrypted result will appear here...",
+    "emptyEncrypt": "Encryption result is empty",
+    "emptyDecrypt": "Decryption result is empty"
+  },
+  "history": {
+    "recent": "Recent History",
+    "clear": "Clear History",
+    "clearAsk": "Clear recent history?",
+    "none": "No history yet",
+    "enc": "Encrypt",
+    "dec": "Decrypt",
+    "apply": "Reuse"
+  },
+  "export": { "title": "Export Image Options", "includeQR": "Include QR code" },
+  "stats": {
+    "title": "Encryption Stats",
+    "totalChars": "Total Characters",
+    "animalCount": "Animal Emojis",
+    "personCount": "Person Emojis",
+    "strength": "Encryption Strength"
+  },
+  "emoji": {
+    "animalsTitle": "Animal Emojis (Latin letters, numbers, western punctuation)",
+    "personsTitle": "Person Emojis (CJK characters and CJK punctuation)",
+    "corresponding": "Maps to: "
+  },
+  "help": {
+    "title": "Help - Changyou Circle",
+    "quickStart": {
+      "title": "Quick Start",
+      "step1": { "title": "Language & Theme", "text": "Change language at top-right; moon/sun for dark/light." },
+      "step2": { "title": "Enter Text", "text": "Paste or type in “Input Text”. CJK, Latin letters, numbers and punctuation supported." },
+      "step3": { "title": "Key (optional)", "text": "Enter an Encryption Key under “Advanced Settings” for extra privacy." },
+      "step4": { "title": "Encrypt / Decrypt", "text": "Click “Encrypt” or “Decrypt”. Shortcuts: Ctrl+E / Ctrl+D." },
+      "step5": { "title": "Copy / Import / Export", "text": "Use “Copy Result”; “Import File” supports TXT/MD; export TXT/PNG." },
+      "step6": { "title": "Share & QR", "text": "Click “Share” to generate a link and QR; when exporting an image, you can choose to include a visible QR code." },
+      "tip": "Tip: Include the QR code if you want others to scan it easily."
+    },
+    "emojiInput": {
+      "title": "Emoji Input",
+      "win": "<strong>Windows</strong>: Win + . opens the emoji panel.",
+      "mac": "<strong>macOS</strong>: Ctrl + Cmd + Space opens the emoji panel.",
+      "ios": "<strong>iPhone/iPad</strong>: Switch to the Emoji keyboard; long‑press for variants.",
+      "android": "<strong>Android</strong>: Open the Emoji panel on the keyboard.",
+      "tip": "You can also click “Reuse” on our page to put history back into input."
+    },
+    "faq": {
+      "title": "FAQ",
+      "q1": "<strong>Q: I don't see text after encrypting?</strong><br>The result appears in the output area; use “Swap Text” to move it back to input.",
+      "q2": "<strong>Q: How do I decrypt from an exported image?</strong><br>If the image includes a visible QR, scan it. Otherwise copy the text from the image back here to decrypt.",
+      "q3": "<strong>Q: Is multi-language failure a bug?</strong><br>No. As long as Encrypt→Decrypt restores the original text, it’s fine."
+    },
+    "contact": {
+      "title": "Contact",
+      "text": "Have suggestions? Contact us: webmaster#3520.net (@)."
+    }
+  },
+  "keyboard": {
+    "hint": "Emoji input: Windows Win + . | macOS Ctrl + Cmd + Space | Mobile switch to Emoji keyboard"
+  },
+  "multi": {
+    "title": "Multi-language Self-test Report",
+    "columns": { "lang": "Language", "original": "Original", "encrypted": "Encrypted", "decrypted": "Decrypted", "result": "Result" },
+    "pass": "Pass",
+    "fail": "Fail"
+  },
+  "footer": { "copyright": "© 2026 Changyou Circle - Emoji Cipher Translator" },
+  "notify": {
+    "copied": "Copied to clipboard!",
+    "applied": "Filled the result into input",
+    "historyCleared": "Recent history cleared",
+    "failed": "Operation failed",
+    "encrypt": {
+      "empty": "Please enter text to encrypt!",
+      "done": "Encryption complete!",
+      "animals": "Animal emojis: {count}",
+      "persons": "Person emojis: {count}"
+    },
+    "decrypt": {
+      "empty": "Please enter text to decrypt!",
+      "done": "Decryption complete! {count} emojis decrypted."
+    },
+    "copy": { "empty": "Nothing to copy!" },
+    "cleared": "Cleared all content!",
+    "swapped": "Swapped input and output!",
+    "multiDone": "Multi-language self-test done! Passed {pass}/{total}",
+    "test": {
+      "success": "Test passed! Encryption and decryption are identical.",
+      "failure": "Test failed! Original and decrypted text differ."
+    },
+    "exampleLoaded": "Loaded example text!"
+  }
+}

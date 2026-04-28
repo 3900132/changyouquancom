@@ -1,0 +1,167 @@
+{
+  "app": { "title": "Traductor de Cifrado con Emojis - Changyou Circle" },
+  "nav": { "home": "Inicio", "help": "Ayuda", "about": "Acerca de" },
+  "meta": {
+    "description": "Sitio oficial de Changyou Circle, Traductor de Cifrado con Emojis: compatible con 8 idiomas (chino simplificado/tradicional, inglés, coreano, japonés, alemán, francés, español). Convierte texto ⇄ emojis en ambos sentidos, con clave privada para una comunicación segura y discreta. Sin registro: un clic y listo. Ideal para chats diarios, mensajes privados y conversaciones transfronterizas: divertido y seguro."
+  },
+  "lang": { "label": "Idioma", "zh": "Chino (Simplificado)", "zh-TW": "Chino (Tradicional)", "en": "Inglés", "es": "Español", "fr": "Francés", "de": "Alemán", "ja": "日本語", "ko": "한국어" },
+  "theme": { "label": "Tema", "light": "Cambiar a modo claro", "dark": "Cambiar a modo oscuro" },
+  "header": {
+    "title": "Cifrador de Emojis de Changyou Circle",
+    "subtitle": "Cifra caracteres CJK (chino, japonés, coreano) y letras latinas (inglés, español, francés, alemán), además de números y signos de puntuación."
+  },
+  "input": {
+    "panelTitle": "Texto de Entrada",
+    "label": "Introduce texto para cifrar/descifrar"
+  },
+  "placeholders": [
+    "Escribe el texto a cifrar… p. ej., ¡Hola mundo! 123",
+    "Introduce texto para cifrar o descifrar… letras, números y símbolos",
+    "Puedes introducir texto, números o emojis para cifrar/descifrar",
+    "Prueba: Esto es una prueba. 123",
+    "Se admite texto mixto: Español 123 ! @ #"
+  ],
+  "hints": {
+    "input": "Consejo: Tras introducir texto, haz clic abajo para cifrar o descifrar",
+    "output": "Consejo: Haz clic en \"Copiar resultado\" o en \"Intercambiar\" para mover el resultado",
+    "stats": "Consejo: Cifra CJK y latinas (con diacríticos) más puntuación",
+    "secretLine": "Úsalo discretamente; no lo cuentes a otros salvo que añadas otra contraseña.",
+    "secretLine2": "Comparte claves solo con personas de confianza; el contenido sin clave no es apto para comunicaciones sensibles."
+  },
+  "guide": {
+    "title": "Cómo Usar",
+    "step1": "Elige el idioma de la interfaz arriba a la derecha (Chino (Simplificado)/Chino (Tradicional)/Inglés/Español/Francés/Alemán/Japonés/Coreano).",
+    "step2": "Opcional: introduce una Clave de Cifrado (p. ej., 123). La clave baraja el mapa de emojis para que solo quienes tengan la misma clave puedan descifrar.",
+    "step3": "Escribe el texto (soporta CJK y letras latinas; la puntuación es opcional).",
+    "step4": "Haz clic en “Cifrar a Emojis” para cifrar; en “Descifrar a Texto” para restaurar.",
+    "step5": "Comparte el resultado junto con la misma clave; de lo contrario no se podrá descifrar correctamente."
+  },
+  "about": {
+    "title": "Changyou Circle • Traductor de Cifrado con Emojis",
+    "paragraphs": [
+      "¿Quieres enviar pequeños secretos sin que otros lo noten? ¿Hacer más divertidos los mensajes? Esta herramienta convierte tu texto en una cadena de emojis. Quien reciba esa cadena puede pegarla aquí para recuperar el texto original: usar emojis como ‘cifrado’ para chatear.",
+      "Es muy sencillo: abre el sitio, escribe tu texto, elige el idioma y pulsa Cifrar — el texto se convierte en emojis. ¿Recibiste un cifrado con emojis? Pégalo y pulsa Descifrar para restaurarlo. Sin curva de aprendizaje: incluso un principiante lo entiende al instante.",
+      "Compatible con 8 idiomas (chino simplificado/tradicional, inglés, coreano, japonés, además de alemán, francés, español). Puedes usar cifrados con emojis sin preocuparte por el idioma.",
+      "Lo más útil es la clave privada. Es como poner un candado al cifrado. Tras configurarla, solo quienes conocen la misma clave pueden ver el texto original. Útil para secretos, saludos privados, notas sensibles o charlas transfronterizas.",
+      "Sin registro ni inicio de sesión: escribe, elige idioma, (opcional) establece la clave y cifra. Rápido y práctico.",
+      "A diferencia de un generador de emojis normal, equilibra diversión y seguridad. Mantiene el chat vivo y permite comunicación cifrada con soporte multilingüe. Usa emojis como ‘clave’ y protege tu privacidad con tu contraseña.",
+      "Tanto si buscas diversión, interacción con ‘códigos’ entre amigos, comunicación privada o conversaciones con amigos de otros países, este traductor te ayudará. Oculta el texto en emojis y mantén la privacidad de forma sencilla."
+    ]
+  },
+  "settings": {
+    "title": "Ajustes Avanzados",
+    "key": "Clave de cifrado",
+    "keyPlaceholder": "Introduce la clave (p. ej., 123)",
+    "preserveSpaces": "Conservar espacios y saltos de línea",
+    "includeNumbers": "Cifrar números",
+    "includePunctuation": "Cifrar puntuación",
+    "keyUnset": "(Clave no establecida)",
+    "keyWeak": "(Clave débil)",
+    "keyMedium": "(Clave media)",
+    "keyStrong": "(Clave fuerte)"
+  },
+  "buttons": {
+    "encrypt": "Cifrar a Emojis",
+    "decrypt": "Descifrar a Texto",
+    "test": "Probar Cifrar/Descifrar",
+    "multiTest": "Auto‑prueba multilingüe",
+    "example": "Cargar Ejemplo",
+    "copy": "Copiar Resultado",
+    "clear": "Limpiar",
+    "swap": "Intercambiar",
+    "import": "Importar archivo",
+    "exportTxt": "Exportar TXT",
+    "exportPng": "Exportar imagen",
+    "share": "Compartir",
+    "copyLink": "Copiar enlace"
+  },
+  "actions": { "cancel": "Cancelar", "export": "Exportar", "close": "Cerrar" },
+  "output": {
+    "panelTitle": "Resultado",
+    "placeholder": "El resultado cifrado o descifrado aparecerá aquí...",
+    "emptyEncrypt": "El resultado de cifrado está vacío",
+    "emptyDecrypt": "El resultado de descifrado está vacío"
+  },
+  "history": {
+    "recent": "Historial reciente",
+    "clear": "Limpiar historial",
+    "clearAsk": "¿Limpiar el historial reciente?",
+    "none": "Sin historial por ahora",
+    "enc": "Cifrar",
+    "dec": "Descifrar",
+    "apply": "Reutilizar"
+  },
+  "export": { "title": "Opciones de exportación de imagen", "includeQR": "Incluir código QR" },
+  "stats": {
+    "title": "Estadísticas de Cifrado",
+    "totalChars": "Caracteres Totales",
+    "animalCount": "Emojis de Animales",
+    "personCount": "Emojis de Personas",
+    "strength": "Fuerza de Cifrado"
+  },
+  "emoji": {
+    "animalsTitle": "Emojis de Animales (letras latinas, números, puntuación occidental)",
+    "personsTitle": "Emojis de Personas (caracteres CJK y puntuación CJK)",
+    "corresponding": "Corresponde a: "
+  },
+  "help": {
+    "title": "Ayuda - Changyou Circle",
+    "quickStart": {
+      "title": "Inicio Rápido",
+      "step1": { "title": "Idioma y tema", "text": "Cambia el idioma arriba; luna/sol para oscuro/claro." },
+      "step2": { "title": "Introducir texto", "text": "Pega o escribe en «Texto de Entrada»." },
+      "step3": { "title": "Clave (opcional)", "text": "Introduce una clave en «Ajustes avanzados» para mayor privacidad." },
+      "step4": { "title": "Cifrar / Descifrar", "text": "Pulsa «Cifrar» o «Descifrar». Atajos: Ctrl+E / Ctrl+D." },
+      "step5": { "title": "Copiar / Importar / Exportar", "text": "«Copiar resultado»; «Importar archivo» admite TXT/MD/Imágenes; exporta TXT/PNG." },
+      "step6": { "title": "Compartir", "text": "«Compartir» genera enlace y QR; al exportar imagen, puedes elegir incluir un QR visible." },
+      "tip": "Consejo: incluye el QR si quieres que otros lo escaneen fácilmente."
+    },
+    "emojiInput": {
+      "title": "Entrada de emojis",
+      "win": "<strong>Windows</strong>: Win + . abre el panel de emojis.",
+      "mac": "<strong>macOS</strong>: Ctrl + Cmd + Space abre el panel de emojis.",
+      "ios": "<strong>iPhone/iPad</strong>: Cambia al teclado de Emojis; mantener pulsado para variantes.",
+      "android": "<strong>Android</strong>: Abre el panel de Emojis del teclado.",
+      "tip": "También puedes pulsar «Reutilizar» para devolver el historial a la entrada."
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": "<strong>P: ¿No veo texto tras cifrar?</strong><br>El resultado está en la zona de salida; usa «Intercambiar» para devolverlo a la entrada.",
+      "q2": "<strong>P: ¿Cómo descifro desde una imagen exportada?</strong><br>Si la imagen incluye un QR visible, escanéalo. Si no, copia el texto de la imagen aquí para descifrar.",
+      "q3": "<strong>P: ¿Fallo multilingüe es un error?</strong><br>No. Mientras «Cifrar→Descifrar» restaure el texto original, todo está bien."
+    },
+    "contact": {
+      "title": "Contacto",
+      "text": "Sugerencias: contáctanos en webmaster#3520.net (@)."
+    }
+  },
+  "footer": { "copyright": "© 2026 Changyou Circle - Traductor de Cifrado con Emojis" },
+  "notify": {
+    "copied": "¡Copiado al portapapeles!",
+    "applied": "Resultado rellenado en la entrada",
+    "historyCleared": "Historial reciente limpiado",
+    "failed": "Operación fallida",
+    "encrypt": {
+      "empty": "¡Introduce texto para cifrar!",
+      "done": "¡Cifrado completado!",
+      "animals": "Emojis de animales: {count}",
+      "persons": "Emojis de personas: {count}"
+    },
+    "decrypt": {
+      "empty": "¡Introduce texto para descifrar!",
+      "done": "¡Descifrado completado! {count} emojis descifrados."
+    },
+    "copy": { "empty": "¡Nada que copiar!" },
+    "cleared": "¡Contenido limpiado!",
+    "swapped": "¡Entrada y salida intercambiadas!",
+    "multiDone": "Auto‑prueba completada: {pass}/{total} superadas",
+    "test": {
+      "success": "¡Prueba superada! Cifrado y descifrado coinciden.",
+      "failure": "¡Prueba fallida! El texto original y el descifrado no coinciden."
+    },
+    "exampleLoaded": "¡Ejemplo cargado!"
+  },
+  "keyboard": {
+    "hint": "Entrada de emojis: Windows Win + . | macOS Ctrl + Cmd + Space | Móvil cambia al teclado de emojis"
+  }
+}
