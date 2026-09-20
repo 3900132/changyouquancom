@@ -1,7 +1,28 @@
 {
   "rewrites": [
-    {
-      "source": "/*",
-      "destination": "/index.html"
-    }
+    { "source": "/zh/", "destination": "/index.html" },
+    { "source": "/zh-TW/", "destination": "/index.html" },
+    { "source": "/en/", "destination": "/index.html" },
+    { "source": "/es/", "destination": "/index.html" },
+    { "source": "/fr/", "destination": "/index.html" },
+    { "source": "/de/", "destination": "/index.html" },
+    { "source": "/ja/", "destination": "/index.html" },
+    { "source": "/ko/", "destination": "/index.html" },
+    { "source": "/zh/help.html", "destination": "/help.html" },
+    { "source": "/zh/about.html", "destination": "/about.html" },
+    { "source": "/zh-TW/help.html", "destination": "/help.html" },
+    { "source": "/zh-TW/about.html", "destination": "/about.html" },
+    { "source": "/en/help.html", "destination": "/help.html" },
+    { "source": "/en/about.html", "destination": "/about.html" },
+    { "source": "/es/help.html", "destination": "/help.html" },
+    { "source": "/es/about.html", "destination": "/about.html" },
+    { "source": "/fr/help.html", "destination": "/help.html" },
+    { "source": "/fr/about.html", "destination": "/about.html" },
+    { "source": "/de/help.html", "destination": "/help.html" },
+    { "source": "/de/about.html", "destination": "/about.html" },
+    { "source": "/ja/help.html", "destination": "/help.html" },
+    { "source": "/ja/about.html", "destination": "/about.html" },
+    { "source": "/ko/help.html", "destination": "/help.html" },
+    { "source": "/ko/about.html", "destination": "/about.html" }
   ]
+}

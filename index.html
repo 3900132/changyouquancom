@@ -279,15 +279,15 @@
                     try {
                         var aboutLink = document.getElementById('aboutLink');
                         if (aboutLink && window.i18n && i18n.current) {
-                            aboutLink.href = '/about.html';
+                            aboutLink.href = '/' + i18n.current + '/about.html';
                         }
                         var helpLink = document.getElementById('helpLink');
                         if (helpLink && window.i18n && i18n.current) {
-                            helpLink.href = '/help.html';
+                            helpLink.href = '/' + i18n.current + '/help.html';
                         }
                         var p = window.location.pathname || '/';
                         if (!/^\/(zh|zh\-TW|en|es|fr|de|ja|ko)\/?$/.test(p)) {
-                            window.history.replaceState(null, '', '/');
+                            window.history.replaceState(null, '', '/' + i18n.current + '/');
                         }
                     } catch(e){}
                 });
@@ -490,11 +490,11 @@
             if (typeof renderHistory === 'function') renderHistory();
             var aboutLink = document.getElementById('aboutLink');
             if (aboutLink && window.i18n && i18n.current) {
-                aboutLink.href = '/about.html';
+                aboutLink.href = '/' + i18n.current + '/about.html';
             }
             var helpLink = document.getElementById('helpLink');
             if (helpLink && window.i18n && i18n.current) {
-                helpLink.href = '/help.html';
+                helpLink.href = '/' + i18n.current + '/help.html';
             }
         }
         function initKey() {
@@ -665,14 +665,14 @@
                             refreshUITexts();
                             try {
                                 const path = window.location.pathname || '/';
-                                const target = '/';
+                                const target = '/' + code + '/';
                                 if (!/^\/(zh|zh\-TW|en|es|fr|de|ja|ko)\/?$/.test(path) || !path.startsWith(target)) {
                                     window.history.replaceState(null, '', target);
                                 }
                                 var aboutLink = document.getElementById('aboutLink');
-                                if (aboutLink) aboutLink.href = '/about.html';
+                                if (aboutLink) aboutLink.href = '/' + code + '/about.html';
                                 var helpLink = document.getElementById('helpLink');
-                                if (helpLink) helpLink.href = '/help.html';
+                                if (helpLink) helpLink.href = '/' + code + '/help.html';
                             } catch(e){}
                         });
                     }

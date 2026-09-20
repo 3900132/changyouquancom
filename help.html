@@ -81,12 +81,14 @@
     document.addEventListener('DOMContentLoaded', async function(){
       if (!window.i18n) return;
       await i18n.init({ defaultLang: 'zh' });
-      // Ensure path is /help.html
+      // Ensure path is /{lang}/help.html
       try{
         var lang = i18n.current || 'zh';
         var path = window.location.pathname || '/help.html';
-        var target = '/help.html';
-        window.history.replaceState(null,'',target);
+        var target = '/' + lang + '/help.html';
+        if (!/^\/(zh|zh\-TW|en|es|fr|de|ja|ko)\/help\.html$/.test(path)) {
+          window.history.replaceState(null,'',target);
+        }
         // Build language menu and links
         var langMenu = document.getElementById('langMenu');
         var langBtn = document.getElementById('langBtn');
@@ -124,7 +126,7 @@
                 buildLangMenu();
                 updateLinks();
                 updateThemeIcon();
-                window.history.replaceState(null,'','/help.html');
+                window.history.replaceState(null,'','/'+code+'/help.html');
               });
               langMenu.classList.remove('open');
             });
@@ -135,9 +137,9 @@
           var homeLogo = document.getElementById('homeLogo');
           var homeLink = document.getElementById('homeLink');
           var aboutLink = document.getElementById('aboutLink');
-          if (homeLogo) homeLogo.href = '/';
-          if (homeLink) homeLink.href = '/';
-          if (aboutLink) aboutLink.href = '/about.html';
+          if (homeLogo) homeLogo.href = '/' + code + '/';
+          if (homeLink) homeLink.href = '/' + code + '/';
+          if (aboutLink) aboutLink.href = '/' + code + '/about.html';
         }
         function updateThemeIcon(){
           var btn = document.getElementById('themeToggle'); if (!btn) return;

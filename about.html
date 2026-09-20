@@ -40,7 +40,7 @@
         await i18n.init({ defaultLang: 'zh' });
         lang = i18n.current || 'zh';
       }
-      history.replaceState(null, '', '/about.html');
+      history.replaceState(null, '', '/' + lang + '/about.html');
       renderAbout();
       buildLangMenu();
       wireLangMenu();
@@ -69,9 +69,9 @@
       var homeLogo = document.getElementById('homeLogo');
       var homeLink = document.getElementById('homeLink');
       var helpLink = document.getElementById('helpLink');
-      if (homeLogo) homeLogo.href = '/';
-      if (homeLink) homeLink.href = '/';
-      if (helpLink) helpLink.href = '/help.html';
+      if (homeLogo) homeLogo.href = '/' + code + '/';
+      if (homeLink) homeLink.href = '/' + code + '/';
+      if (helpLink) helpLink.href = '/' + code + '/help.html';
     }
     function initTheme(){
       try {
@@ -112,7 +112,7 @@
       if (menu) menu.addEventListener('click', async function(e){
         const item = e.target.closest('.lang-item'); if (!item) return;
         const code = item.getAttribute('data-code');
-        if (window.i18n) { await i18n.setLanguage(code); renderAbout(); buildLangMenu(); updateLinks(); history.replaceState(null,'','/about.html'); }
+        if (window.i18n) { await i18n.setLanguage(code); renderAbout(); buildLangMenu(); updateLinks(); history.replaceState(null,'','/'+code+'/about.html'); }
         menu.classList.remove('open');
       });
       document.addEventListener('click', function(){ if (menu) menu.classList.remove('open'); });
