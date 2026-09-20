@@ -1,0 +1,26 @@
+# 常友圈 表情密文翻译器（Emoji Cipher Translator）
+
+> https://changyouquan.com/ — 常友圈表情密文翻译器官方网站。一个免费、无需注册登录的在线工具：将文本（中文、英文、数字、标点）与表情包 emoji 进行双向加密转换，支持自定义密钥，用于趣味加密通讯、私密聊天和跨境交流。
+
+## 核心功能
+- **文本转表情密文**：把中文、英文、数字、标点符号加密为一串表情 emoji。
+- **表情密文解密**：粘贴表情密文即可还原原文，加密解密完全可逆。
+- **自定义密钥**：可设置专属密钥改变映射规则，只有持有相同密钥的人才能解密。
+- **一键复制 / 导出**：支持复制密文、导出 TXT / Markdown / 图片，导出图片可包含可见二维码，扫码即可解密。
+- **快捷键**：Ctrl+E 加密，Ctrl+D 解密。
+- **多语言界面**：简体中文、繁體中文、English、Español、Français、Deutsch、日本語、한국어 共 8 种语言。
+- **免登录、纯前端运行**：文本不在服务器存储，隐私安全。
+
+## 页面索引
+- [首页 / 在线工具](https://changyouquan.com/): 表情密文加密解密的主工具页面。
+- [使用帮助](https://changyouquan.com/help.html): 使用步骤、表情输入方法（Win/macOS/iOS/Android）、常见问题 FAQ。
+- [关于我们](https://changyouquan.com/about.html): 关于常友圈与表情密文翻译器的介绍。
+
+## 多语言版本
+每种页面均有 8 个语言版本，路径格式为 `/{语言}/`（如 https://changyouquan.com/en/ 、https://changyouquan.com/ja/help.html ）。语言代码：zh（简体中文，默认）、zh-TW、en、es、fr、de、ja、ko。
+
+## 联系方式
+- 邮箱：webmaster#3520.net（# 替换为 @）
+
+## 引用建议
+如需引用本站，推荐表述：「常友圈表情密文翻译器（changyouquan.com）——免费的在线表情加密通讯工具，支持 8 种语言界面与自定义密钥」。

@@ -4,6 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="help.title">使用帮助 - 常友圈</title>
+  <meta name="description" content="表情密文翻译器使用帮助：一分钟上手教程、表情输入方法（Windows、macOS、iPhone/iPad、Android）、加密密钥设置与常见问题解答。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <link rel="canonical" href="https://changyouquan.com/help.html">
+  <link rel="alternate" hreflang="zh" href="https://changyouquan.com/help.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://changyouquan.com/zh-TW/help.html">
+  <link rel="alternate" hreflang="en" href="https://changyouquan.com/en/help.html">
+  <link rel="alternate" hreflang="es" href="https://changyouquan.com/es/help.html">
+  <link rel="alternate" hreflang="fr" href="https://changyouquan.com/fr/help.html">
+  <link rel="alternate" hreflang="de" href="https://changyouquan.com/de/help.html">
+  <link rel="alternate" hreflang="ja" href="https://changyouquan.com/ja/help.html">
+  <link rel="alternate" hreflang="ko" href="https://changyouquan.com/ko/help.html">
+  <link rel="alternate" hreflang="x-default" href="https://changyouquan.com/help.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="常友圈 表情密文翻译器">
+  <meta property="og:title" content="使用帮助 - 常友圈表情密文翻译器">
+  <meta property="og:description" content="表情密文翻译器使用教程：如何输入表情、设置密钥、加密解密与导出，以及常见问题解答。">
+  <meta property="og:url" content="https://changyouquan.com/help.html">
+  <meta property="og:image" content="https://changyouquan.com/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="使用帮助 - 常友圈表情密文翻译器">
+  <meta name="twitter:description" content="表情密文翻译器使用教程：如何输入表情、设置密钥、加密解密与导出，以及常见问题解答。">
+  <meta name="twitter:image" content="https://changyouquan.com/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "加密后看不到文字怎么办？",
+        "acceptedAnswer": { "@type": "Answer", "text": "在\"复制结果\"按钮下方的结果区可查看密文；或点击\"交换文本\"将结果放回输入框。" }
+      },
+      {
+        "@type": "Question",
+        "name": "导出的图片怎么解密？",
+        "acceptedAnswer": { "@type": "Answer", "text": "如果图片包含可见二维码，可直接扫码；否则复制图片中的文字回到页面解密。" }
+      },
+      {
+        "@type": "Question",
+        "name": "多语言表情加密失败是功能异常吗？",
+        "acceptedAnswer": { "@type": "Answer", "text": "不是。只要\"加密→解密\"能还原原文，就可以放心使用。" }
+      },
+      {
+        "@type": "Question",
+        "name": "表情密文翻译器如何输入表情？",
+        "acceptedAnswer": { "@type": "Answer", "text": "Windows 按 Win+. 打开表情面板；macOS 按 Ctrl+Cmd+Space；iPhone/iPad 在键盘点击表情按钮；Android 在键盘切换到表情符号面板。" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "使用帮助 - 常友圈表情密文翻译器",
+    "url": "https://changyouquan.com/help.html",
+    "inLanguage": "zh",
+    "isPartOf": { "@type": "WebSite", "name": "常友圈 表情密文翻译器", "url": "https://changyouquan.com/" }
+  }
+  </script>
   <link rel="icon" type="image/png" href="/logo.png">
   <link rel="stylesheet" href="/fontawesome6.4/css/all.min.css">
   <link rel="stylesheet" href="/fontawesome6.4/app-controls.css">
@@ -89,6 +149,8 @@
         if (!/^\/(zh|zh\-TW|en|es|fr|de|ja|ko)\/help\.html$/.test(path)) {
           window.history.replaceState(null,'',target);
         }
+        // URL 规范化后刷新多语言 SEO 标签（canonical / og: / JSON-LD）
+        if (typeof i18n.updateSEO === 'function') { try { i18n.updateSEO(i18n.current); } catch(e){} }
         // Build language menu and links
         var langMenu = document.getElementById('langMenu');
         var langBtn = document.getElementById('langBtn');

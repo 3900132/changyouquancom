@@ -3,9 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
+  <meta name="description" content="常友圈表情密文翻译器官方介绍：我们致力于打造趣味与安全兼具的表情加密通讯工具，支持8种语言、自定义密钥、免登录纯前端运行，保护你的每一次私密交流。">
   <link rel="icon" type="image/png" href="/logo.png">
   <title data-i18n="about.title">关于我们 - 常友圈</title>
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <link rel="canonical" href="https://changyouquan.com/about.html">
+  <link rel="alternate" hreflang="zh" href="https://changyouquan.com/about.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://changyouquan.com/zh-TW/about.html">
+  <link rel="alternate" hreflang="en" href="https://changyouquan.com/en/about.html">
+  <link rel="alternate" hreflang="es" href="https://changyouquan.com/es/about.html">
+  <link rel="alternate" hreflang="fr" href="https://changyouquan.com/fr/about.html">
+  <link rel="alternate" hreflang="de" href="https://changyouquan.com/de/about.html">
+  <link rel="alternate" hreflang="ja" href="https://changyouquan.com/ja/about.html">
+  <link rel="alternate" hreflang="ko" href="https://changyouquan.com/ko/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://changyouquan.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="常友圈 表情密文翻译器">
+  <meta property="og:title" content="关于我们 - 常友圈表情密文翻译器">
+  <meta property="og:description" content="常友圈致力于打造趣味与安全兼具的表情加密通讯工具：8种语言界面、自定义密钥、免登录纯前端运行。">
+  <meta property="og:url" content="https://changyouquan.com/about.html">
+  <meta property="og:image" content="https://changyouquan.com/logo.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "常友圈",
+    "alternateName": "changyouquan",
+    "url": "https://changyouquan.com/",
+    "logo": "https://changyouquan.com/logo.png",
+    "description": "常友圈打造表情密文翻译器：一款趣味与安全兼具的表情加密通讯工具，支持8种语言、自定义密钥、免登录纯前端运行。"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "关于我们 - 常友圈表情密文翻译器",
+    "url": "https://changyouquan.com/about.html",
+    "inLanguage": "zh",
+    "isPartOf": { "@type": "WebSite", "name": "常友圈 表情密文翻译器", "url": "https://changyouquan.com/" }
+  }
+  </script>
   <link rel="stylesheet" href="/fontawesome6.4/css/all.min.css">
   <link rel="stylesheet" href="/fontawesome6.4/app-controls.css">
 </head>
@@ -41,6 +80,7 @@
         lang = i18n.current || 'zh';
       }
       history.replaceState(null, '', '/' + lang + '/about.html');
+      if (window.i18n && typeof i18n.updateSEO === 'function') { try { i18n.updateSEO(i18n.current); } catch(e){} }
       renderAbout();
       buildLangMenu();
       wireLangMenu();
